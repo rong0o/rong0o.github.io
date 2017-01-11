@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="嵘么么的个人博客">
 <meta property="og:description" content="事件时将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，具体内容包括事件流、事件处理程序绑定方式、事件对象">
 <meta property="og:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B6.jpg">
-<meta property="og:updated_time" content="2017-01-11T05:41:09.788Z">
+<meta property="og:updated_time" content="2017-01-11T05:42:25.956Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript的事件机制">
 <meta name="twitter:description" content="事件时将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，具体内容包括事件流、事件处理程序绑定方式、事件对象">
@@ -424,8 +424,8 @@
 <p>IE+Oprea浏览器<br><strong>程序作用域为全局作用域，this指向window对象</strong><br>添加方法：attachEvent(“on+事件名”，事件处理程序)<br>移除方法：detachEvent(“on+事件名”，事件处理程序)</p>
 </blockquote>
 <hr>
-<h1 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h1><p>在触发某个事件时，会产生一个相应的事件对象，这个对象包含所有与事件相关的信息。如：导致事件的元素、事件的类型等</p>
-<h2 id="标准DOM中的事件对象"><a href="#标准DOM中的事件对象" class="headerlink" title="标准DOM中的事件对象"></a>标准DOM中的事件对象</h2><ol>
+<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>在触发某个事件时，会产生一个相应的事件对象，这个对象包含所有与事件相关的信息。如：导致事件的元素、事件的类型等</p>
+<h3 id="标准DOM中的事件对象"><a href="#标准DOM中的事件对象" class="headerlink" title="标准DOM中的事件对象"></a>标准DOM中的事件对象</h3><ol>
 <li>对象名：event</li>
 <li>常用属性：<ul>
 <li>type：被触发事件的类型</li>
@@ -438,7 +438,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="IE中的事件对象"><a href="#IE中的事件对象" class="headerlink" title="IE中的事件对象"></a>IE中的事件对象</h2><ol>
+<h3 id="IE中的事件对象"><a href="#IE中的事件对象" class="headerlink" title="IE中的事件对象"></a>IE中的事件对象</h3><ol>
 <li>对象名：window.event</li>
 <li>常用属性：<ul>
 <li>type：被触发事件的类型</li>
@@ -670,7 +670,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何理解事件？"><span class="nav-number">1.</span> <span class="nav-text">如何理解事件？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件流"><span class="nav-number">2.</span> <span class="nav-text">事件流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#两种基本事件模型"><span class="nav-number">2.1.</span> <span class="nav-text">两种基本事件模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM事件流"><span class="nav-number">2.2.</span> <span class="nav-text">DOM事件流</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件处理程序绑定方式"><span class="nav-number">3.</span> <span class="nav-text">事件处理程序绑定方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标准DOM事件处理程序"><span class="nav-number">3.1.</span> <span class="nav-text">标准DOM事件处理程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IE事件处理程序"><span class="nav-number">3.2.</span> <span class="nav-text">IE事件处理程序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件对象"><span class="nav-number">4.</span> <span class="nav-text">事件对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标准DOM中的事件对象"><span class="nav-number">4.1.</span> <span class="nav-text">标准DOM中的事件对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IE中的事件对象"><span class="nav-number">4.2.</span> <span class="nav-text">IE中的事件对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可跨浏览器的事件处理程序"><span class="nav-number">5.</span> <span class="nav-text">可跨浏览器的事件处理程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#如何理解事件？"><span class="nav-number">1.</span> <span class="nav-text">如何理解事件？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件流"><span class="nav-number">2.</span> <span class="nav-text">事件流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#两种基本事件模型"><span class="nav-number">2.1.</span> <span class="nav-text">两种基本事件模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DOM事件流"><span class="nav-number">2.2.</span> <span class="nav-text">DOM事件流</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件处理程序绑定方式"><span class="nav-number">3.</span> <span class="nav-text">事件处理程序绑定方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标准DOM事件处理程序"><span class="nav-number">3.1.</span> <span class="nav-text">标准DOM事件处理程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IE事件处理程序"><span class="nav-number">3.2.</span> <span class="nav-text">IE事件处理程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件对象"><span class="nav-number">3.3.</span> <span class="nav-text">事件对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM中的事件对象"><span class="nav-number">3.3.1.</span> <span class="nav-text">标准DOM中的事件对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE中的事件对象"><span class="nav-number">3.3.2.</span> <span class="nav-text">IE中的事件对象</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#可跨浏览器的事件处理程序"><span class="nav-number">4.</span> <span class="nav-text">可跨浏览器的事件处理程序</span></a></li></ol></div>
             
 
           </div>
