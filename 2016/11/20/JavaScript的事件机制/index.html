@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="事件时将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同具体内容包括事件流、事件处理程序绑定方式、事件对象">
+<meta name="description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript的事件机制">
 <meta property="og:url" content="http://yoursite.com/2016/11/20/JavaScript的事件机制/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
-<meta property="og:description" content="事件时将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同具体内容包括事件流、事件处理程序绑定方式、事件对象">
+<meta property="og:description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
 <meta property="og:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg">
-<meta property="og:updated_time" content="2017-01-11T06:18:38.838Z">
+<meta property="og:updated_time" content="2017-01-11T12:23:43.870Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript的事件机制">
-<meta name="twitter:description" content="事件时将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同具体内容包括事件流、事件处理程序绑定方式、事件对象">
+<meta name="twitter:description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
 <meta name="twitter:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg">
 
 
@@ -391,7 +391,7 @@
 
       
         <blockquote>
-<p>事件时将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同具体内容包括事件流、事件处理程序绑定方式、事件对象</p>
+<p>事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象</p>
 </blockquote>
 <a id="more"></a>
 <h2 id="如何理解事件？"><a href="#如何理解事件？" class="headerlink" title="如何理解事件？"></a>如何理解事件？</h2><p>  JavaScript与HTML之间的交互就是通过<strong>事件</strong>实现的。<br> <strong>事件</strong>：用户或浏览器自身执行的某种动作，换言之，文档或浏览器发生的一些特定的交互瞬间。<br> <strong>事件处理程序</strong>：又称事件侦听器，事件发生时执行的代码段。</p>
@@ -423,8 +423,9 @@
 </ol>
 <p>对应的事件处理程序移除方法：removeEventListener()，参数必须相同。<br><strong>注意：</strong>此种方法，以匿名函数添加的事件处理程序无法被移除<br><strong>此方法可以添加多个事件处理程序</strong></p>
 <h3 id="IE事件处理程序"><a href="#IE事件处理程序" class="headerlink" title="IE事件处理程序"></a>IE事件处理程序</h3><blockquote>
-<p>IE+Oprea浏览器<br><strong>程序作用域为全局作用域，this指向window对象</strong><br>添加方法：attachEvent(“on+事件名”，事件处理程序)<br>移除方法：detachEvent(“on+事件名”，事件处理程序)</p>
+<p>IE+Oprea浏览器</p>
 </blockquote>
+<p><strong>程序作用域为全局作用域，this指向window对象</strong><br>添加方法：attachEvent(“on+事件名”，事件处理程序)<br>移除方法：detachEvent(“on+事件名”，事件处理程序)</p>
 <hr>
 <h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>在触发某个事件时，会产生一个相应的事件对象，这个对象包含所有与事件相关的信息。如：导致事件的元素、事件的类型等</p>
 <h3 id="DOM中的事件对象"><a href="#DOM中的事件对象" class="headerlink" title="DOM中的事件对象"></a>DOM中的事件对象</h3><ol>
@@ -487,15 +488,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/20/如何编写MarkDown文件/" rel="next" title="如何编写MarkDown文件">
-                <i class="fa fa-chevron-left"></i> 如何编写MarkDown文件
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/25/详述JavaScript的数组/" rel="prev" title="详述JavaScript数组">
+                详述JavaScript数组 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -597,7 +598,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -606,7 +607,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
