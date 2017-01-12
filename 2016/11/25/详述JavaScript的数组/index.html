@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/11/25/详述JavaScript的数组/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
 <meta property="og:description" content="数组是JavaScript中的常用类型，本文详述了数组的基本知识以及一些常用的数组方法，并对每种方法进行了详细解释">
-<meta property="og:updated_time" content="2017-01-12T03:09:19.038Z">
+<meta property="og:updated_time" content="2017-01-12T06:57:53.650Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="详述JavaScript数组">
 <meta name="twitter:description" content="数组是JavaScript中的常用类型，本文详述了数组的基本知识以及一些常用的数组方法，并对每种方法进行了详细解释">
@@ -417,54 +417,36 @@
 <h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>定义：<br>var arr=[[0,1],[0,1]]</p>
 <h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><p>并不含有从0开始的连续索引，一般数组的length会比实际元素个数大。不连续的索引返回undefined，可利用此判读。</p>
 <h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><p>数组原型链上提供了大量方法</p>
-<ol>
-<li>Array.prototype.join()  </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-join"><a href="#Array-prototype-join" class="headerlink" title="Array.prototype.join()"></a>Array.prototype.join()</h3><ul>
 <li>将数组转为字符串，同时将传入字符串插入每个元素中间，可通过此方法将字符串重复</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function reapeatString(str,n)</div><div class="line">&#123;</div><div class="line">	return new Array(n+1).join(str);</div><div class="line">&#125;</div><div class="line">reapeatString(hi,3);  //hihihi</div></pre></td></tr></table></figure>
-<ol>
-<li>Array.prototype.reverse()   </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-reverse"><a href="#Array-prototype-reverse" class="headerlink" title="Array.prototype.reverse()"></a>Array.prototype.reverse()</h3><ul>
 <li>将数组逆序，直接修改数组</li>
 </ul>
-<ol>
-<li>Array.prototype.sort()  </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-sort"><a href="#Array-prototype-sort" class="headerlink" title="Array.prototype.sort()"></a>Array.prototype.sort()</h3><ul>
 <li>将数组排序，默认按字母升序排列，直接修改数组</li>
-<li>可按自定义规则排序，传入比较函数<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">	return a-b;  </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
+<li>可按自定义规则排序，传入比较函数</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">	return a-b;  </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <blockquote>
 <p>按正常数值相减的正负返回，是升序排列；按正常数值相减的正负符合取反，是降序排列.<br>传入的a,b可以是对象或数组（但都是某个数组的元素），相减时再具体到数组的第几个数值或对象的哪个属性，最后会按结果对包含数组排序</p>
 </blockquote>
-<ol>
-<li>Array.prototype.concat() </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-concat"><a href="#Array-prototype-concat" class="headerlink" title="Array.prototype.concat()"></a>Array.prototype.concat()</h3><ul>
 <li>合并数组，不直接修改原数组，需通过返回值才能拿到结果</li>
 <li><ul>
 <li>若传入参数是一维数组，会被拉平</li>
-<li>若传入参数是二维数组，，会拉平最外第一维，元素数组格式不变<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr=[0,0,0];</div><div class="line">arr.concat([1,2],10); //[0,0,0,1,2,10]</div><div class="line">arr.concat([[1,2],10]); //[0,0,0,[1,2],10]</div></pre></td></tr></table></figure>
-</li>
+<li>若传入参数是二维数组，，会拉平最外第一维，元素数组格式不变</li>
 </ul>
 </li>
 </ul>
-<ol>
-<li>Array.prototype.slice(n,m) </li>
-</ol>
-<ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr=[0,0,0];</div><div class="line">arr.concat([1,2],10); //[0,0,0,1,2,10]</div><div class="line">arr.concat([[1,2],10]); //[0,0,0,[1,2],10]</div></pre></td></tr></table></figure>
+<h3 id="Array-prototype-slice-n-m"><a href="#Array-prototype-slice-n-m" class="headerlink" title="Array.prototype.slice(n,m)"></a>Array.prototype.slice(n,m)</h3><ul>
 <li>获取部分数组，arr[n]到arr[m-1],即左闭右开</li>
 <li>Array.prototype.slice(n),从arr[n]到最后，包含最后的所有元素</li>
 <li>若参数为负值，则表示由后往前的索引值，最后一个元素为-1</li>
 </ul>
-<ol>
-<li>Array.prototype.splice()  </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-splice"><a href="#Array-prototype-splice" class="headerlink" title="Array.prototype.splice()"></a>Array.prototype.splice()</h3><ul>
 <li>删除和添加部分数组，对原数组直接修改</li>
 <li>传入参数：<ul>
 <li>第一个：索引</li>
@@ -473,44 +455,26 @@
 </ul>
 </li>
 </ul>
-<ol>
-<li>Array.prototype.forEach(function(x,index,a){})   </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-forEach-function-x-index-a"><a href="#Array-prototype-forEach-function-x-index-a" class="headerlink" title="Array.prototype.forEach(function(x,index,a){})"></a>Array.prototype.forEach(function(x,index,a){})</h3><ul>
 <li>遍历数组，对每个元素调用回调函数 </li>
-<li>回调函数可传入三个参数：元素的值，元素的索引，数组本身<blockquote>
+<li>回调函数可传入三个参数：元素的值，元素的索引，数组本身</li>
+</ul>
+<blockquote>
 <p>E5S的新方法，IE9及以上支持,接下来都是</p>
 </blockquote>
-</li>
-</ul>
-<ol>
-<li>Array.prototype.map(function(x,index,a){})   </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-map-function-x-index-a"><a href="#Array-prototype-map-function-x-index-a" class="headerlink" title="Array.prototype.map(function(x,index,a){})"></a>Array.prototype.map(function(x,index,a){})</h3><ul>
 <li>数组映射，对每个元素按函数里的映射方式进行映射，不直接修改原数组</li>
 </ul>
-<ol>
-<li>Array.prototype.filter(function(x,index,a){})  </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-filter-function-x-index-a"><a href="#Array-prototype-filter-function-x-index-a" class="headerlink" title="Array.prototype.filter(function(x,index,a){})"></a>Array.prototype.filter(function(x,index,a){})</h3><ul>
 <li>数组过滤，按回调函数返回值的真假，过滤掉为真的元素，不直接修改原数组，通过返回值拿结果</li>
 </ul>
-<ol>
-<li>Array.prototype.every(function(x,index,a){})  </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-every-function-x-index-a"><a href="#Array-prototype-every-function-x-index-a" class="headerlink" title="Array.prototype.every(function(x,index,a){})"></a>Array.prototype.every(function(x,index,a){})</h3><ul>
 <li>数组判断，每一个元素，回调函数都返回真时，返回真。发现有不满足的元素，就不继续遍历了</li>
 </ul>
-<ol>
-<li>Array.prototype.some(function(x,index,a){}) </li>
-</ol>
-<ul>
+<h3 id="Array-prototype-some-function-x-index-a"><a href="#Array-prototype-some-function-x-index-a" class="headerlink" title="Array.prototype.some(function(x,index,a){})"></a>Array.prototype.some(function(x,index,a){})</h3><ul>
 <li>数组判断，存在元素，回调函数返回真时，返回真。发现有满足的元素，就不继续遍历了</li>
 </ul>
-<ol>
-<li>Array.prototype.reduce(function(x,y){})</li>
-</ol>
-<ul>
+<h3 id="Array-prototype-reduce-function-x-y"><a href="#Array-prototype-reduce-function-x-y" class="headerlink" title="Array.prototype.reduce(function(x,y){})"></a>Array.prototype.reduce(function(x,y){})</h3><ul>
 <li>数组元素累加，对数组元素逐个进行操作，每次操作的结果将用于下一次操作</li>
 <li>回调函数传入参数<ul>
 <li>第一个：上次回调函数的返回值，第一次时为数组第一个元素</li>
@@ -518,17 +482,11 @@
 </ul>
 </li>
 </ul>
-<ol>
-<li>Array.prototype.indexOf(要查找的元素，开始查找的位置)</li>
-</ol>
-<ul>
+<h3 id="Array-prototype-indexOf-要查找的元素，开始查找的位置"><a href="#Array-prototype-indexOf-要查找的元素，开始查找的位置" class="headerlink" title="Array.prototype.indexOf(要查找的元素，开始查找的位置)"></a>Array.prototype.indexOf(要查找的元素，开始查找的位置)</h3><ul>
 <li>查找元素</li>
 <li>返回值：首个被找到的元素在数组中的索引位置; 若没有找到则返回 -1</li>
 </ul>
-<ol>
-<li>Array.isArray(所要检查的对象)</li>
-</ol>
-<ul>
+<h3 id="Array-isArray-所要检查的对象"><a href="#Array-isArray-所要检查的对象" class="headerlink" title="Array.isArray(所要检查的对象)"></a>Array.isArray(所要检查的对象)</h3><ul>
 <li>检查对象是否为数组，是返回true，否则false</li>
 <li>为构造器上的方法</li>
 </ul>
@@ -747,7 +705,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组定义"><span class="nav-number">1.</span> <span class="nav-text">数组定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组增删"><span class="nav-number">2.</span> <span class="nav-text">数组增删</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组迭代"><span class="nav-number">3.</span> <span class="nav-text">数组迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">4.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#稀疏数组"><span class="nav-number">5.</span> <span class="nav-text">稀疏数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组方法"><span class="nav-number">6.</span> <span class="nav-text">数组方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组定义"><span class="nav-number">1.</span> <span class="nav-text">数组定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组增删"><span class="nav-number">2.</span> <span class="nav-text">数组增删</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组迭代"><span class="nav-number">3.</span> <span class="nav-text">数组迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">4.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#稀疏数组"><span class="nav-number">5.</span> <span class="nav-text">稀疏数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组方法"><span class="nav-number">6.</span> <span class="nav-text">数组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-join"><span class="nav-number">6.1.</span> <span class="nav-text">Array.prototype.join()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reverse"><span class="nav-number">6.2.</span> <span class="nav-text">Array.prototype.reverse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-sort"><span class="nav-number">6.3.</span> <span class="nav-text">Array.prototype.sort()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-concat"><span class="nav-number">6.4.</span> <span class="nav-text">Array.prototype.concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-slice-n-m"><span class="nav-number">6.5.</span> <span class="nav-text">Array.prototype.slice(n,m)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-splice"><span class="nav-number">6.6.</span> <span class="nav-text">Array.prototype.splice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-forEach-function-x-index-a"><span class="nav-number">6.7.</span> <span class="nav-text">Array.prototype.forEach(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-map-function-x-index-a"><span class="nav-number">6.8.</span> <span class="nav-text">Array.prototype.map(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-filter-function-x-index-a"><span class="nav-number">6.9.</span> <span class="nav-text">Array.prototype.filter(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-every-function-x-index-a"><span class="nav-number">6.10.</span> <span class="nav-text">Array.prototype.every(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-some-function-x-index-a"><span class="nav-number">6.11.</span> <span class="nav-text">Array.prototype.some(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reduce-function-x-y"><span class="nav-number">6.12.</span> <span class="nav-text">Array.prototype.reduce(function(x,y){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-indexOf-要查找的元素，开始查找的位置"><span class="nav-number">6.13.</span> <span class="nav-text">Array.prototype.indexOf(要查找的元素，开始查找的位置)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-isArray-所要检查的对象"><span class="nav-number">6.14.</span> <span class="nav-text">Array.isArray(所要检查的对象)</span></a></li></ol></li></ol></div>
             
 
           </div>
