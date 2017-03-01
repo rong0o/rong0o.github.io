@@ -84,16 +84,18 @@
 
 
 
-<meta name="description" content="数组是JavaScript中的常用类型，本文详述了数组的基本知识以及一些常用的数组方法，并对每种方法进行了详细解释">
+<meta name="description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="详述JavaScript数组">
-<meta property="og:url" content="http://yoursite.com/2016/11/25/详述JavaScript的数组/index.html">
+<meta property="og:title" content="JavaScript的事件机制">
+<meta property="og:url" content="http://yoursite.com/2016/12/20/JavaScript的事件机制/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
-<meta property="og:description" content="数组是JavaScript中的常用类型，本文详述了数组的基本知识以及一些常用的数组方法，并对每种方法进行了详细解释">
-<meta property="og:updated_time" content="2017-01-12T06:57:53.650Z">
+<meta property="og:description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
+<meta property="og:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg">
+<meta property="og:updated_time" content="2017-03-01T05:51:01.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="详述JavaScript数组">
-<meta name="twitter:description" content="数组是JavaScript中的常用类型，本文详述了数组的基本知识以及一些常用的数组方法，并对每种方法进行了详细解释">
+<meta name="twitter:title" content="JavaScript的事件机制">
+<meta name="twitter:description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
+<meta name="twitter:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg">
 
 
 
@@ -121,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/25/详述JavaScript的数组/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/20/JavaScript的事件机制/"/>
 
 
 
 
 
-  <title> 详述JavaScript数组 | 嵘么么的个人博客 </title>
+  <title> JavaScript的事件机制 | 嵘么么的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -270,7 +272,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/25/详述JavaScript的数组/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/20/JavaScript的事件机制/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="嵘么么">
@@ -294,7 +296,7 @@
             
             
               
-                详述JavaScript数组
+                JavaScript的事件机制
               
             
           </h1>
@@ -309,8 +311,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-25T20:30:44+08:00">
-                2016-11-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-20T20:30:44+08:00">
+                2016-12-20
               </time>
             
 
@@ -350,8 +352,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/11/25/详述JavaScript的数组/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/25/详述JavaScript的数组/" itemprop="commentCount"></span>
+                <a href="/2016/12/20/JavaScript的事件机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/20/JavaScript的事件机制/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -361,7 +363,7 @@
 
           
           
-             <span id="/2016/11/25/详述JavaScript的数组/" class="leancloud_visitors" data-flag-title="详述JavaScript数组">
+             <span id="/2016/12/20/JavaScript的事件机制/" class="leancloud_visitors" data-flag-title="JavaScript的事件机制">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -389,107 +391,71 @@
 
       
         <blockquote>
-<p>数组是JavaScript中的常用类型，本文详述了数组的基本知识以及一些常用的数组方法，并对每种方法进行了详细解释</p>
+<p>事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="数组定义"><a href="#数组定义" class="headerlink" title="数组定义"></a>数组定义</h2><ol>
-<li><p>用字面量直接定义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var arr=[0,0,0]; //注意，是方括号</div></pre></td></tr></table></figure>
-</li>
-<li><p>通过new Array();</p>
+<h2 id="如何理解事件？"><a href="#如何理解事件？" class="headerlink" title="如何理解事件？"></a>如何理解事件？</h2><p>  JavaScript与HTML之间的交互就是通过<strong>事件</strong>实现的。<br> <strong>事件</strong>：用户或浏览器自身执行的某种动作，换言之，文档或浏览器发生的一些特定的交互瞬间。<br> <strong>事件处理程序</strong>：又称事件侦听器，事件发生时执行的代码段。</p>
+<hr>
+<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p> <strong>事件流</strong>描述的是从页面中接收事件的顺序</p>
+<h3 id="两种基本事件模型"><a href="#两种基本事件模型" class="headerlink" title="两种基本事件模型"></a>两种基本事件模型</h3><ol>
+<li><strong>事件冒泡</strong>：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。</li>
+<li><strong>事件捕获</strong>：事件从最不精确的对象(document 对象)开始触发，然后到最精确。<blockquote>
+<p>IE9、Safari、Chrome、Opera、Firefox都是从window对象开始捕获，冒泡到window对象</p>
+</blockquote>
 </li>
 </ol>
-<ul>
-<li>参数为一个时，表示数组的长度</li>
-<li>参数为多个时，则表示数组元素</li>
-</ul>
-<h2 id="数组增删"><a href="#数组增删" class="headerlink" title="数组增删"></a>数组增删</h2><ul>
-<li>arr(arr.length)=0; //在数组最后面添加元素</li>
-<li>push()/pop(); //在数组最后面增删元素</li>
-<li>unshift()/shift(); //在数组最前面增删元素</li>
-</ul>
-<h2 id="数组迭代"><a href="#数组迭代" class="headerlink" title="数组迭代"></a>数组迭代</h2><p>for…in,eg:for(i in arr){}</p>
-<ul>
-<li>遍历数组</li>
-<li>会把数组原型链上的元素一同遍历出来</li>
-<li>是无序遍历</li>
-</ul>
-<h2 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h2><p>定义：<br>var arr=[[0,1],[0,1]]</p>
-<h2 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h2><p>并不含有从0开始的连续索引，一般数组的length会比实际元素个数大。不连续的索引返回undefined，可利用此判读。</p>
-<h2 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h2><p>数组原型链上提供了大量方法</p>
-<h3 id="Array-prototype-join"><a href="#Array-prototype-join" class="headerlink" title="Array.prototype.join()"></a>Array.prototype.join()</h3><ul>
-<li>将数组转为字符串，同时将传入字符串插入每个元素中间，可通过此方法将字符串重复</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function reapeatString(str,n)</div><div class="line">&#123;</div><div class="line">	return new Array(n+1).join(str);</div><div class="line">&#125;</div><div class="line">reapeatString(hi,3);  //hihihi</div></pre></td></tr></table></figure>
-<h3 id="Array-prototype-reverse"><a href="#Array-prototype-reverse" class="headerlink" title="Array.prototype.reverse()"></a>Array.prototype.reverse()</h3><ul>
-<li>将数组逆序，直接修改数组</li>
-</ul>
-<h3 id="Array-prototype-sort"><a href="#Array-prototype-sort" class="headerlink" title="Array.prototype.sort()"></a>Array.prototype.sort()</h3><ul>
-<li>将数组排序，默认按字母升序排列，直接修改数组</li>
-<li>可按自定义规则排序，传入比较函数</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">arr.sort(function(a,b)&#123;</div><div class="line">	return a-b;  </div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><img src="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg" alt=""></p>
+<h3 id="标准DOM事件流"><a href="#标准DOM事件流" class="headerlink" title="标准DOM事件流"></a>标准DOM事件流</h3><p>同时支持 两种基本事件模型，规定事件流包括三个阶段：<strong>事件捕获阶段、处于目标阶段、事件冒泡阶段</strong></p>
 <blockquote>
-<p>按正常数值相减的正负返回，是升序排列；按正常数值相减的正负符合取反，是降序排列.<br>传入的a,b可以是对象或数组（但都是某个数组的元素），相减时再具体到数组的第几个数值或对象的哪个属性，最后会按结果对包含数组排序</p>
+<p>DOM事件处理程序绑定时，程序员可以自己选择绑定事件时采用事件捕获还是事件冒泡。</p>
 </blockquote>
-<h3 id="Array-prototype-concat"><a href="#Array-prototype-concat" class="headerlink" title="Array.prototype.concat()"></a>Array.prototype.concat()</h3><ul>
-<li>合并数组，不直接修改原数组，需通过返回值才能拿到结果</li>
-<li><ul>
-<li>若传入参数是一维数组，会被拉平</li>
-<li>若传入参数是二维数组，，会拉平最外第一维，元素数组格式不变</li>
-</ul>
+<h3 id="IE事件流"><a href="#IE事件流" class="headerlink" title="IE事件流"></a>IE事件流</h3><p>IE只支持事件冒泡，不支持事件捕获。</p>
+<hr>
+<h2 id="事件处理程序绑定方式"><a href="#事件处理程序绑定方式" class="headerlink" title="事件处理程序绑定方式"></a>事件处理程序绑定方式</h2><h3 id="标准DOM事件处理程序"><a href="#标准DOM事件处理程序" class="headerlink" title="标准DOM事件处理程序"></a>标准DOM事件处理程序</h3><p>事件处理程序属性名为“on”+事件名<br><strong>程序作用域为元素的作用域，this指向元素本身</strong></p>
+<ol>
+<li><strong>方法一：</strong>将函数值赋给一个事件处理程序属性。如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var btn=document.getElementById(&quot;myBtn&quot;);</div><div class="line">btn.onclick=function()&#123;</div><div class="line">//具体代码段</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var arr=[0,0,0];</div><div class="line">arr.concat([1,2],10); //[0,0,0,1,2,10]</div><div class="line">arr.concat([[1,2],10]); //[0,0,0,[1,2],10]</div></pre></td></tr></table></figure>
-<h3 id="Array-prototype-slice-n-m"><a href="#Array-prototype-slice-n-m" class="headerlink" title="Array.prototype.slice(n,m)"></a>Array.prototype.slice(n,m)</h3><ul>
-<li>获取部分数组，arr[n]到arr[m-1],即左闭右开</li>
-<li>Array.prototype.slice(n),从arr[n]到最后，包含最后的所有元素</li>
-<li>若参数为负值，则表示由后往前的索引值，最后一个元素为-1</li>
-</ul>
-<h3 id="Array-prototype-splice"><a href="#Array-prototype-splice" class="headerlink" title="Array.prototype.splice()"></a>Array.prototype.splice()</h3><ul>
-<li>删除和添加部分数组，对原数组直接修改</li>
-<li>传入参数：<ul>
-<li>第一个：索引</li>
-<li>第二个：删除个数  （可无） </li>
-<li>后面：将添加的数组，在索引处添加  （可无）</li>
-</ul>
+</ol>
+<p><strong>此种方法只能添加一个事件处理程序</strong></p>
+<ol>
+<li><strong>方法二：</strong>通过addEventListener()方法。如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">addEventListener(&quot;事件名&quot;，事件处理程序，ture/false:在事件捕获/冒泡阶段调用模型)</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<h3 id="Array-prototype-forEach-function-x-index-a"><a href="#Array-prototype-forEach-function-x-index-a" class="headerlink" title="Array.prototype.forEach(function(x,index,a){})"></a>Array.prototype.forEach(function(x,index,a){})</h3><ul>
-<li>遍历数组，对每个元素调用回调函数 </li>
-<li>回调函数可传入三个参数：元素的值，元素的索引，数组本身</li>
-</ul>
-<blockquote>
-<p>E5S的新方法，IE9及以上支持,接下来都是</p>
+</ol>
+<p>对应的事件处理程序移除方法：removeEventListener()，参数必须相同。<br><strong>注意：</strong>此种方法，以匿名函数添加的事件处理程序无法被移除<br><strong>此方法可以添加多个事件处理程序</strong></p>
+<h3 id="IE事件处理程序"><a href="#IE事件处理程序" class="headerlink" title="IE事件处理程序"></a>IE事件处理程序</h3><blockquote>
+<p>IE+Oprea浏览器</p>
 </blockquote>
-<h3 id="Array-prototype-map-function-x-index-a"><a href="#Array-prototype-map-function-x-index-a" class="headerlink" title="Array.prototype.map(function(x,index,a){})"></a>Array.prototype.map(function(x,index,a){})</h3><ul>
-<li>数组映射，对每个元素按函数里的映射方式进行映射，不直接修改原数组</li>
-</ul>
-<h3 id="Array-prototype-filter-function-x-index-a"><a href="#Array-prototype-filter-function-x-index-a" class="headerlink" title="Array.prototype.filter(function(x,index,a){})"></a>Array.prototype.filter(function(x,index,a){})</h3><ul>
-<li>数组过滤，按回调函数返回值的真假，过滤掉为真的元素，不直接修改原数组，通过返回值拿结果</li>
-</ul>
-<h3 id="Array-prototype-every-function-x-index-a"><a href="#Array-prototype-every-function-x-index-a" class="headerlink" title="Array.prototype.every(function(x,index,a){})"></a>Array.prototype.every(function(x,index,a){})</h3><ul>
-<li>数组判断，每一个元素，回调函数都返回真时，返回真。发现有不满足的元素，就不继续遍历了</li>
-</ul>
-<h3 id="Array-prototype-some-function-x-index-a"><a href="#Array-prototype-some-function-x-index-a" class="headerlink" title="Array.prototype.some(function(x,index,a){})"></a>Array.prototype.some(function(x,index,a){})</h3><ul>
-<li>数组判断，存在元素，回调函数返回真时，返回真。发现有满足的元素，就不继续遍历了</li>
-</ul>
-<h3 id="Array-prototype-reduce-function-x-y"><a href="#Array-prototype-reduce-function-x-y" class="headerlink" title="Array.prototype.reduce(function(x,y){})"></a>Array.prototype.reduce(function(x,y){})</h3><ul>
-<li>数组元素累加，对数组元素逐个进行操作，每次操作的结果将用于下一次操作</li>
-<li>回调函数传入参数<ul>
-<li>第一个：上次回调函数的返回值，第一次时为数组第一个元素</li>
-<li>第二个：这次将操作的数组元素，第一次时为数组第二个元素</li>
+<p><strong>程序作用域为全局作用域，this指向window对象</strong><br>添加方法：attachEvent(“on+事件名”，事件处理程序)<br>移除方法：detachEvent(“on+事件名”，事件处理程序)</p>
+<hr>
+<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>在触发某个事件时，会产生一个相应的事件对象，这个对象包含所有与事件相关的信息。如：导致事件的元素、事件的类型等</p>
+<h3 id="标准DOM中的事件对象"><a href="#标准DOM中的事件对象" class="headerlink" title="标准DOM中的事件对象"></a>标准DOM中的事件对象</h3><ol>
+<li>对象名：event</li>
+<li>常用属性：<ul>
+<li>type：被触发事件的类型</li>
+<li>target：事件的目标</li>
 </ul>
 </li>
+<li>常用方法：<ul>
+<li>event.preventDefault():取消事件默认行为(前提：cancelable属性值为true)</li>
+<li>event.stopPropagation():取消事件的进一步冒泡或捕获</li>
 </ul>
-<h3 id="Array-prototype-indexOf-要查找的元素，开始查找的位置"><a href="#Array-prototype-indexOf-要查找的元素，开始查找的位置" class="headerlink" title="Array.prototype.indexOf(要查找的元素，开始查找的位置)"></a>Array.prototype.indexOf(要查找的元素，开始查找的位置)</h3><ul>
-<li>查找元素</li>
-<li>返回值：首个被找到的元素在数组中的索引位置; 若没有找到则返回 -1</li>
+</li>
+</ol>
+<h3 id="IE中的事件对象"><a href="#IE中的事件对象" class="headerlink" title="IE中的事件对象"></a>IE中的事件对象</h3><ol>
+<li>对象名：window.event</li>
+<li>常用属性：<ul>
+<li>type：被触发事件的类型</li>
+<li>scrElement：事件的目标</li>
 </ul>
-<h3 id="Array-isArray-所要检查的对象"><a href="#Array-isArray-所要检查的对象" class="headerlink" title="Array.isArray(所要检查的对象)"></a>Array.isArray(所要检查的对象)</h3><ul>
-<li>检查对象是否为数组，是返回true，否则false</li>
-<li>为构造器上的方法</li>
+</li>
+<li>常用方法：<ul>
+<li>event.cancelBubble(true/false):true-&gt;取消事件默认行为</li>
+<li>event.returnValue(true/false):false-&gt;取消事件的进一步冒泡或捕获</li>
 </ul>
+</li>
+</ol>
+<hr>
+<h2 id="可跨浏览器的事件处理程序"><a href="#可跨浏览器的事件处理程序" class="headerlink" title="可跨浏览器的事件处理程序"></a>可跨浏览器的事件处理程序</h2><p>构造EventUtil对象，为其添加可兼容各浏览器的事件处理方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">var =EventUtil&#123;</div><div class="line">    //添加事件处理程序//</div><div class="line">    addHandler:function(element,type,handler)&#123;</div><div class="line">        if(element.addEventListener)&#123;</div><div class="line">            addEventListener(type,handler,false);</div><div class="line">        &#125;else if(element.attachEvent)&#123;</div><div class="line">            attachEvent(&quot;on&quot;+type,handler);</div><div class="line">        &#125;else&#123;</div><div class="line">            element[&quot;on&quot;+type]=handler;</div><div class="line">            &#125;</div><div class="line">        &#125;  </div><div class="line">    //移除事件处理程序//</div><div class="line">    removeHandler:function(element,type,handler)&#123;</div><div class="line">        if(element.removeEventListener)&#123;</div><div class="line">            removeEventListener(type,handler,false);</div><div class="line">        &#125;else if(element.detachEvent)&#123;</div><div class="line">            detachEvent(&quot;on&quot;+type,handler);</div><div class="line">        &#125;else&#123;</div><div class="line">            element[&quot;on&quot;+type]=null;</div><div class="line">        &#125;</div><div class="line">     &#125;</div><div class="line">     //获得事件对象// </div><div class="line">    getEvent:function(event)&#123;</div><div class="line">        return event ? event : window.event;</div><div class="line">     &#125; </div><div class="line">     //获得事件的目标// </div><div class="line">    getTarget:function(event)&#123;</div><div class="line">        return event.target || event.scrElement;</div><div class="line">     &#125;</div><div class="line">     //取消事件的默认行为//</div><div class="line">    preventDefault:function(event)&#123;</div><div class="line">		if(event.preventDefault)&#123;</div><div class="line">			event.preventDefault();</div><div class="line">		&#125;else&#123;</div><div class="line">		event.returValue=false;</div><div class="line">	&#125;</div><div class="line">    &#125;</div><div class="line">    //阻止事件进一步冒泡// </div><div class="line">    stopPropagation:function(event)&#123;</div><div class="line">    	if(event.stopPropagation)&#123;</div><div class="line">			event.stopPropagation();</div><div class="line">		&#125;else&#123;</div><div class="line">			event.cancelBubble=true;</div><div class="line">	&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -522,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/20/JavaScript的事件机制/" rel="next" title="JavaScript的事件机制">
-                <i class="fa fa-chevron-left"></i> JavaScript的事件机制
+              <a href="/2016/01/02/DOM树的增删改查/" rel="next" title="DOM树的增查改删总结">
+                <i class="fa fa-chevron-left"></i> DOM树的增查改删总结
               </a>
             
           </div>
@@ -532,8 +498,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/20/利用express创建项目/" rel="prev" title="如何利用express新建项目（上）">
-                如何利用express新建项目（上） <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/25/详述JavaScript的数组/" rel="prev" title="详述JavaScript数组">
+                详述JavaScript数组 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -549,10 +515,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/11/25/详述JavaScript的数组/"
-     data-title="详述JavaScript数组"
+        <div class="ds-share flat" data-thread-key="2016/12/20/JavaScript的事件机制/"
+     data-title="JavaScript的事件机制"
      data-content=""
-     data-url="http://yoursite.com/2016/11/25/详述JavaScript的数组/">
+     data-url="http://yoursite.com/2016/12/20/JavaScript的事件机制/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -579,8 +545,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/25/详述JavaScript的数组/"
-           data-title="详述JavaScript数组" data-url="http://yoursite.com/2016/11/25/详述JavaScript的数组/">
+      <div class="ds-thread" data-thread-key="2016/12/20/JavaScript的事件机制/"
+           data-title="JavaScript的事件机制" data-url="http://yoursite.com/2016/12/20/JavaScript的事件机制/">
       </div>
     
   </div>
@@ -627,7 +593,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -645,7 +611,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -709,7 +675,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组定义"><span class="nav-number">1.</span> <span class="nav-text">数组定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组增删"><span class="nav-number">2.</span> <span class="nav-text">数组增删</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组迭代"><span class="nav-number">3.</span> <span class="nav-text">数组迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维数组"><span class="nav-number">4.</span> <span class="nav-text">二维数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#稀疏数组"><span class="nav-number">5.</span> <span class="nav-text">稀疏数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组方法"><span class="nav-number">6.</span> <span class="nav-text">数组方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-join"><span class="nav-number">6.1.</span> <span class="nav-text">Array.prototype.join()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reverse"><span class="nav-number">6.2.</span> <span class="nav-text">Array.prototype.reverse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-sort"><span class="nav-number">6.3.</span> <span class="nav-text">Array.prototype.sort()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-concat"><span class="nav-number">6.4.</span> <span class="nav-text">Array.prototype.concat()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-slice-n-m"><span class="nav-number">6.5.</span> <span class="nav-text">Array.prototype.slice(n,m)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-splice"><span class="nav-number">6.6.</span> <span class="nav-text">Array.prototype.splice()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-forEach-function-x-index-a"><span class="nav-number">6.7.</span> <span class="nav-text">Array.prototype.forEach(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-map-function-x-index-a"><span class="nav-number">6.8.</span> <span class="nav-text">Array.prototype.map(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-filter-function-x-index-a"><span class="nav-number">6.9.</span> <span class="nav-text">Array.prototype.filter(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-every-function-x-index-a"><span class="nav-number">6.10.</span> <span class="nav-text">Array.prototype.every(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-some-function-x-index-a"><span class="nav-number">6.11.</span> <span class="nav-text">Array.prototype.some(function(x,index,a){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-reduce-function-x-y"><span class="nav-number">6.12.</span> <span class="nav-text">Array.prototype.reduce(function(x,y){})</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-indexOf-要查找的元素，开始查找的位置"><span class="nav-number">6.13.</span> <span class="nav-text">Array.prototype.indexOf(要查找的元素，开始查找的位置)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-isArray-所要检查的对象"><span class="nav-number">6.14.</span> <span class="nav-text">Array.isArray(所要检查的对象)</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何理解事件？"><span class="nav-number">1.</span> <span class="nav-text">如何理解事件？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件流"><span class="nav-number">2.</span> <span class="nav-text">事件流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两种基本事件模型"><span class="nav-number">2.1.</span> <span class="nav-text">两种基本事件模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM事件流"><span class="nav-number">2.2.</span> <span class="nav-text">标准DOM事件流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE事件流"><span class="nav-number">2.3.</span> <span class="nav-text">IE事件流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理程序绑定方式"><span class="nav-number">3.</span> <span class="nav-text">事件处理程序绑定方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM事件处理程序"><span class="nav-number">3.1.</span> <span class="nav-text">标准DOM事件处理程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE事件处理程序"><span class="nav-number">3.2.</span> <span class="nav-text">IE事件处理程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件对象"><span class="nav-number">4.</span> <span class="nav-text">事件对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM中的事件对象"><span class="nav-number">4.1.</span> <span class="nav-text">标准DOM中的事件对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE中的事件对象"><span class="nav-number">4.2.</span> <span class="nav-text">IE中的事件对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可跨浏览器的事件处理程序"><span class="nav-number">5.</span> <span class="nav-text">可跨浏览器的事件处理程序</span></a></li></ol></div>
             
 
           </div>
