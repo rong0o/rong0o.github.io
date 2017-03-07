@@ -84,18 +84,16 @@
 
 
 
-<meta name="description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
+<meta name="description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript的事件机制">
-<meta property="og:url" content="http://yoursite.com/2016/12/20/JavaScript的事件机制/index.html">
+<meta property="og:title" content="深入理解JavaScript的闭包">
+<meta property="og:url" content="http://yoursite.com/2016/01/03/轻松理解JavaScript之闭包/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
-<meta property="og:description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
-<meta property="og:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg">
-<meta property="og:updated_time" content="2017-03-01T05:51:01.955Z">
+<meta property="og:description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
+<meta property="og:updated_time" content="2017-03-07T14:03:40.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript的事件机制">
-<meta name="twitter:description" content="事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象">
-<meta name="twitter:image" content="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg">
+<meta name="twitter:title" content="深入理解JavaScript的闭包">
+<meta name="twitter:description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
 
 
 
@@ -123,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/20/JavaScript的事件机制/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/01/03/轻松理解JavaScript之闭包/"/>
 
 
 
 
 
-  <title> JavaScript的事件机制 | 嵘么么的个人博客 </title>
+  <title> 深入理解JavaScript的闭包 | 嵘么么的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/12/20/JavaScript的事件机制/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/03/轻松理解JavaScript之闭包/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="嵘么么">
@@ -286,7 +284,7 @@
             
             
               
-                JavaScript的事件机制
+                深入理解JavaScript的闭包
               
             
           </h1>
@@ -301,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-12-20T20:30:44+08:00">
-                2016-12-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-01-03T20:30:44+08:00">
+                2016-01-03
               </time>
             
 
@@ -342,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2016/12/20/JavaScript的事件机制/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/20/JavaScript的事件机制/" itemprop="commentCount"></span>
+                <a href="/2016/01/03/轻松理解JavaScript之闭包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/轻松理解JavaScript之闭包/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -353,7 +351,7 @@
 
           
           
-             <span id="/2016/12/20/JavaScript的事件机制/" class="leancloud_visitors" data-flag-title="JavaScript的事件机制">
+             <span id="/2016/01/03/轻松理解JavaScript之闭包/" class="leancloud_visitors" data-flag-title="深入理解JavaScript的闭包">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -381,71 +379,29 @@
 
       
         <blockquote>
-<p>事件是将JavaScript脚本与网页联系在一起的主要方式，是JavaScript中最重要的主题之一，深入理解事件的工作机制以及它们对性能的影响至关重要。本文将详细介绍JavaScript的事件机制，并对比分析了浏览器之间的不同，具体内容包括事件流、事件处理程序绑定方式、事件对象</p>
+<p>闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="如何理解事件？"><a href="#如何理解事件？" class="headerlink" title="如何理解事件？"></a>如何理解事件？</h2><p>  JavaScript与HTML之间的交互就是通过<strong>事件</strong>实现的。<br> <strong>事件</strong>：用户或浏览器自身执行的某种动作，换言之，文档或浏览器发生的一些特定的交互瞬间。<br> <strong>事件处理程序</strong>：又称事件侦听器，事件发生时执行的代码段。</p>
-<hr>
-<h2 id="事件流"><a href="#事件流" class="headerlink" title="事件流"></a>事件流</h2><p> <strong>事件流</strong>描述的是从页面中接收事件的顺序</p>
-<h3 id="两种基本事件模型"><a href="#两种基本事件模型" class="headerlink" title="两种基本事件模型"></a>两种基本事件模型</h3><ol>
-<li><strong>事件冒泡</strong>：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。</li>
-<li><strong>事件捕获</strong>：事件从最不精确的对象(document 对象)开始触发，然后到最精确。<blockquote>
-<p>IE9、Safari、Chrome、Opera、Firefox都是从window对象开始捕获，冒泡到window对象</p>
-</blockquote>
+<h2 id="一、什么是闭包？"><a href="#一、什么是闭包？" class="headerlink" title="一、什么是闭包？"></a>一、什么是闭包？</h2><p>闭包就是可以访问另一个函数作用域中变量的<strong>函数</strong>。<br>下面列举出常见的闭包实现方式，以例子讲解闭包概念</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">　　　　var n=999;</div><div class="line">　　　　nAdd=function()&#123;n+=1&#125;</div><div class="line">　　　　function f2()&#123;</div><div class="line">　　　　　　alert(n);</div><div class="line">　　　　&#125;</div><div class="line">　　　　return f2;</div><div class="line">　　&#125;</div><div class="line">　　var result=f1();</div><div class="line">　　result(); // 999</div><div class="line">　　nAdd();</div><div class="line">　　result(); // 1000</div></pre></td></tr></table></figure>
+<p>f1是f2的父函数，而f2被赋给了一个全局变量（return的值），这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收，这便形成了闭包。<br>因此，可以这么理解。<strong>闭包机制就是，如果A函数引用了另一个函数B的变量，但是B返回后A仍没有返回，仍存在，因为A的引用，所以B的所有局部变量并不会随B退出而注销，会一直存在，直到A注销。此时A就是闭包。</strong></p>
+<h2 id="二、闭包的this指针"><a href="#二、闭包的this指针" class="headerlink" title="二、闭包的this指针"></a>二、闭包的this指针</h2><p>闭包通常在全局环境调用的，所以this通常指向window，具体情况还是需要视执行环境而言，总之this指向执行环境。<br>若需要闭包的this指向闭包的包含对象，则需要将包含对象的this作为变量传进闭包。</p>
+<h2 id="三、使用闭包的注意点"><a href="#三、使用闭包的注意点" class="headerlink" title="三、使用闭包的注意点"></a>三、使用闭包的注意点</h2><ol>
+<li><p>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+</li>
+<li><p>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
 </li>
 </ol>
-<p><img src="http://ojg9qyra6.bkt.clouddn.com/%E4%BA%8B%E4%BB%B62.jpg" alt=""></p>
-<h3 id="标准DOM事件流"><a href="#标准DOM事件流" class="headerlink" title="标准DOM事件流"></a>标准DOM事件流</h3><p>同时支持 两种基本事件模型，规定事件流包括三个阶段：<strong>事件捕获阶段、处于目标阶段、事件冒泡阶段</strong></p>
-<blockquote>
-<p>DOM事件处理程序绑定时，程序员可以自己选择绑定事件时采用事件捕获还是事件冒泡。</p>
-</blockquote>
-<h3 id="IE事件流"><a href="#IE事件流" class="headerlink" title="IE事件流"></a>IE事件流</h3><p>IE只支持事件冒泡，不支持事件捕获。</p>
-<hr>
-<h2 id="事件处理程序绑定方式"><a href="#事件处理程序绑定方式" class="headerlink" title="事件处理程序绑定方式"></a>事件处理程序绑定方式</h2><h3 id="标准DOM事件处理程序"><a href="#标准DOM事件处理程序" class="headerlink" title="标准DOM事件处理程序"></a>标准DOM事件处理程序</h3><p>事件处理程序属性名为“on”+事件名<br><strong>程序作用域为元素的作用域，this指向元素本身</strong></p>
+<p>##　四、解决一道闭包常见面试题<br>问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function onMyLoad()&#123;</div><div class="line">            /*</div><div class="line">            抛出问题:</div><div class="line">                此题的目的是想每次点击对应目标时弹出对应的数字下标 0~4,但实际是无论点击哪个目标都会弹出数字5</div><div class="line">            问题所在:</div><div class="line">                arr 中的每一项的 onclick 均为一个函数实例(Function 对象),这个函数实例也产生了一个闭包域,</div><div class="line">                这个闭包域引用了外部闭包域的变量,其 function scope 的 closure 对象有个名为 i 的引用,</div><div class="line">                外部闭包域的私有变量内容发生变化,内部闭包域得到的值自然会发生改变</div><div class="line">            */</div><div class="line">            var arr = document.getElementsByTagName(&quot;p&quot;);</div><div class="line">            for(var i = 0; i &lt; arr.length;i++)&#123;</div><div class="line">                arr[i].onclick = function()&#123;</div><div class="line">                    alert(i);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>解决方法</p>
 <ol>
-<li><strong>方法一：</strong>将函数值赋给一个事件处理程序属性。如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var btn=document.getElementById(&quot;myBtn&quot;);</div><div class="line">btn.onclick=function()&#123;</div><div class="line">//具体代码段</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
+<li>在外面再加一层函数，将i作为函数参数传进来，这样每次保存的是函数内部的变量，与外部i不是同一个内存空间，而每次调用函数都会生成一个局部变量，所以可以保证每次保存的值互不影响。</li>
 </ol>
-<p><strong>此种方法只能添加一个事件处理程序</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(var i = 0; i&lt;arr.length;i++)&#123;</div><div class="line">    arr[i].onclick = (function(arg)&#123;</div><div class="line">        return function () &#123;</div><div class="line">            alert(arg);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ol>
-<li><strong>方法二：</strong>通过addEventListener()方法。如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">addEventListener(&quot;事件名&quot;，事件处理程序，ture/false:在事件捕获/冒泡阶段调用模型)</div></pre></td></tr></table></figure>
-</li>
+<li>用ES6新特let，将for循环的var i改成let i，这样当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量。你可能会问，如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</li>
 </ol>
-<p>对应的事件处理程序移除方法：removeEventListener()，参数必须相同。<br><strong>注意：</strong>此种方法，以匿名函数添加的事件处理程序无法被移除<br><strong>此方法可以添加多个事件处理程序</strong></p>
-<h3 id="IE事件处理程序"><a href="#IE事件处理程序" class="headerlink" title="IE事件处理程序"></a>IE事件处理程序</h3><blockquote>
-<p>IE+Oprea浏览器</p>
-</blockquote>
-<p><strong>程序作用域为全局作用域，this指向window对象</strong><br>添加方法：attachEvent(“on+事件名”，事件处理程序)<br>移除方法：detachEvent(“on+事件名”，事件处理程序)</p>
-<hr>
-<h2 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h2><p>在触发某个事件时，会产生一个相应的事件对象，这个对象包含所有与事件相关的信息。如：导致事件的元素、事件的类型等</p>
-<h3 id="标准DOM中的事件对象"><a href="#标准DOM中的事件对象" class="headerlink" title="标准DOM中的事件对象"></a>标准DOM中的事件对象</h3><ol>
-<li>对象名：event</li>
-<li>常用属性：<ul>
-<li>type：被触发事件的类型</li>
-<li>target：事件的目标</li>
-</ul>
-</li>
-<li>常用方法：<ul>
-<li>event.preventDefault():取消事件默认行为(前提：cancelable属性值为true)</li>
-<li>event.stopPropagation():取消事件的进一步冒泡或捕获</li>
-</ul>
-</li>
-</ol>
-<h3 id="IE中的事件对象"><a href="#IE中的事件对象" class="headerlink" title="IE中的事件对象"></a>IE中的事件对象</h3><ol>
-<li>对象名：window.event</li>
-<li>常用属性：<ul>
-<li>type：被触发事件的类型</li>
-<li>scrElement：事件的目标</li>
-</ul>
-</li>
-<li>常用方法：<ul>
-<li>event.cancelBubble(true/false):true-&gt;取消事件默认行为</li>
-<li>event.returnValue(true/false):false-&gt;取消事件的进一步冒泡或捕获</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="可跨浏览器的事件处理程序"><a href="#可跨浏览器的事件处理程序" class="headerlink" title="可跨浏览器的事件处理程序"></a>可跨浏览器的事件处理程序</h2><p>构造EventUtil对象，为其添加可兼容各浏览器的事件处理方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">var =EventUtil&#123;</div><div class="line">    //添加事件处理程序//</div><div class="line">    addHandler:function(element,type,handler)&#123;</div><div class="line">        if(element.addEventListener)&#123;</div><div class="line">            addEventListener(type,handler,false);</div><div class="line">        &#125;else if(element.attachEvent)&#123;</div><div class="line">            attachEvent(&quot;on&quot;+type,handler);</div><div class="line">        &#125;else&#123;</div><div class="line">            element[&quot;on&quot;+type]=handler;</div><div class="line">            &#125;</div><div class="line">        &#125;  </div><div class="line">    //移除事件处理程序//</div><div class="line">    removeHandler:function(element,type,handler)&#123;</div><div class="line">        if(element.removeEventListener)&#123;</div><div class="line">            removeEventListener(type,handler,false);</div><div class="line">        &#125;else if(element.detachEvent)&#123;</div><div class="line">            detachEvent(&quot;on&quot;+type,handler);</div><div class="line">        &#125;else&#123;</div><div class="line">            element[&quot;on&quot;+type]=null;</div><div class="line">        &#125;</div><div class="line">     &#125;</div><div class="line">     //获得事件对象// </div><div class="line">    getEvent:function(event)&#123;</div><div class="line">        return event ? event : window.event;</div><div class="line">     &#125; </div><div class="line">     //获得事件的目标// </div><div class="line">    getTarget:function(event)&#123;</div><div class="line">        return event.target || event.scrElement;</div><div class="line">     &#125;</div><div class="line">     //取消事件的默认行为//</div><div class="line">    preventDefault:function(event)&#123;</div><div class="line">		if(event.preventDefault)&#123;</div><div class="line">			event.preventDefault();</div><div class="line">		&#125;else&#123;</div><div class="line">		event.returValue=false;</div><div class="line">	&#125;</div><div class="line">    &#125;</div><div class="line">    //阻止事件进一步冒泡// </div><div class="line">    stopPropagation:function(event)&#123;</div><div class="line">    	if(event.stopPropagation)&#123;</div><div class="line">			event.stopPropagation();</div><div class="line">		&#125;else&#123;</div><div class="line">			event.cancelBubble=true;</div><div class="line">	&#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -478,18 +434,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/03/轻松理解JavaScript之闭包/" rel="next" title="深入理解JavaScript的闭包">
-                <i class="fa fa-chevron-left"></i> 深入理解JavaScript的闭包
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/12/25/详述JavaScript的数组/" rel="prev" title="详述JavaScript数组">
-                详述JavaScript数组 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/12/20/JavaScript的事件机制/" rel="prev" title="JavaScript的事件机制">
+                JavaScript的事件机制 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -505,10 +457,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/12/20/JavaScript的事件机制/"
-     data-title="JavaScript的事件机制"
+        <div class="ds-share flat" data-thread-key="2016/01/03/轻松理解JavaScript之闭包/"
+     data-title="深入理解JavaScript的闭包"
      data-content=""
-     data-url="http://yoursite.com/2016/12/20/JavaScript的事件机制/">
+     data-url="http://yoursite.com/2016/01/03/轻松理解JavaScript之闭包/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -535,8 +487,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/20/JavaScript的事件机制/"
-           data-title="JavaScript的事件机制" data-url="http://yoursite.com/2016/12/20/JavaScript的事件机制/">
+      <div class="ds-thread" data-thread-key="2016/01/03/轻松理解JavaScript之闭包/"
+           data-title="深入理解JavaScript的闭包" data-url="http://yoursite.com/2016/01/03/轻松理解JavaScript之闭包/">
       </div>
     
   </div>
@@ -665,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何理解事件？"><span class="nav-number">1.</span> <span class="nav-text">如何理解事件？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件流"><span class="nav-number">2.</span> <span class="nav-text">事件流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两种基本事件模型"><span class="nav-number">2.1.</span> <span class="nav-text">两种基本事件模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM事件流"><span class="nav-number">2.2.</span> <span class="nav-text">标准DOM事件流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE事件流"><span class="nav-number">2.3.</span> <span class="nav-text">IE事件流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件处理程序绑定方式"><span class="nav-number">3.</span> <span class="nav-text">事件处理程序绑定方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM事件处理程序"><span class="nav-number">3.1.</span> <span class="nav-text">标准DOM事件处理程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE事件处理程序"><span class="nav-number">3.2.</span> <span class="nav-text">IE事件处理程序</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件对象"><span class="nav-number">4.</span> <span class="nav-text">事件对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标准DOM中的事件对象"><span class="nav-number">4.1.</span> <span class="nav-text">标准DOM中的事件对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IE中的事件对象"><span class="nav-number">4.2.</span> <span class="nav-text">IE中的事件对象</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可跨浏览器的事件处理程序"><span class="nav-number">5.</span> <span class="nav-text">可跨浏览器的事件处理程序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是闭包？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是闭包？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、闭包的this指针"><span class="nav-number">2.</span> <span class="nav-text">二、闭包的this指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、使用闭包的注意点"><span class="nav-number">3.</span> <span class="nav-text">三、使用闭包的注意点</span></a></li></ol></div>
             
 
           </div>
