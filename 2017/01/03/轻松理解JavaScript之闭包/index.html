@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/03/轻松理解JavaScript之闭包/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
 <meta property="og:description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
-<meta property="og:updated_time" content="2017-03-07T14:07:35.617Z">
+<meta property="og:updated_time" content="2017-03-07T14:10:55.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深入理解JavaScript的闭包">
 <meta name="twitter:description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
@@ -392,16 +392,11 @@
 <li><p>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
 </li>
 </ol>
-<p>##　四、解决一道闭包常见面试题<br>问题：</p>
+<h2 id="四、解决一道闭包常见面试题"><a href="#四、解决一道闭包常见面试题" class="headerlink" title="四、解决一道闭包常见面试题"></a>四、解决一道闭包常见面试题</h2><p>问题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function onMyLoad()&#123;</div><div class="line">            /*</div><div class="line">            抛出问题:</div><div class="line">                此题的目的是想每次点击对应目标时弹出对应的数字下标 0~4,但实际是无论点击哪个目标都会弹出数字5</div><div class="line">            问题所在:</div><div class="line">                arr 中的每一项的 onclick 均为一个函数实例(Function 对象),这个函数实例也产生了一个闭包域,</div><div class="line">                这个闭包域引用了外部闭包域的变量,其 function scope 的 closure 对象有个名为 i 的引用,</div><div class="line">                外部闭包域的私有变量内容发生变化,内部闭包域得到的值自然会发生改变</div><div class="line">            */</div><div class="line">            var arr = document.getElementsByTagName(&quot;p&quot;);</div><div class="line">            for(var i = 0; i &lt; arr.length;i++)&#123;</div><div class="line">                arr[i].onclick = function()&#123;</div><div class="line">                    alert(i);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
-<p>解决方法</p>
-<ol>
-<li>在外面再加一层函数，将i作为函数参数传进来，这样每次保存的是函数内部的变量，与外部i不是同一个内存空间，而每次调用函数都会生成一个局部变量，所以可以保证每次保存的值互不影响。</li>
-</ol>
+<p>解决方法<br>1、在外面再加一层函数，将i作为函数参数传进来，这样每次保存的是函数内部的变量，与外部i不是同一个内存空间，而每次调用函数都会生成一个局部变量，所以可以保证每次保存的值互不影响。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(var i = 0; i&lt;arr.length;i++)&#123;</div><div class="line">    arr[i].onclick = (function(arg)&#123;</div><div class="line">        return function () &#123;</div><div class="line">            alert(arg);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ol>
-<li>用ES6新特let，将for循环的var i改成let i，这样当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量。你可能会问，如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</li>
-</ol>
+<p>2、用ES6新特let，将for循环的var i改成let i，这样当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量。你可能会问，如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</p>
 
       
     </div>
@@ -621,7 +616,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是闭包？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是闭包？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、闭包的this指针"><span class="nav-number">2.</span> <span class="nav-text">二、闭包的this指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、使用闭包的注意点"><span class="nav-number">3.</span> <span class="nav-text">三、使用闭包的注意点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是闭包？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是闭包？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、闭包的this指针"><span class="nav-number">2.</span> <span class="nav-text">二、闭包的this指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、使用闭包的注意点"><span class="nav-number">3.</span> <span class="nav-text">三、使用闭包的注意点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、解决一道闭包常见面试题"><span class="nav-number">4.</span> <span class="nav-text">四、解决一道闭包常见面试题</span></a></li></ol></div>
             
 
           </div>
