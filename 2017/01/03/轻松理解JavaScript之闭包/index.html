@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaScript,DOM," />
+  <meta name="keywords" content="JavaScript," />
 
 
 
@@ -84,18 +84,16 @@
 
 
 
-<meta name="description" content="对HTML DOM的操作是前端JavaScript编程时必备的技能，本文是我自己对DOM树操作的总结，主要是方法的罗列，原理性的讲述较少，适合大家用于理清思路或是温习">
+<meta name="description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DOM树的增查改删总结">
-<meta property="og:url" content="http://yoursite.com/2017/01/02/DOM树的增删改查/index.html">
+<meta property="og:title" content="深入理解JavaScript的闭包">
+<meta property="og:url" content="http://yoursite.com/2017/01/03/轻松理解JavaScript之闭包/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
-<meta property="og:description" content="对HTML DOM的操作是前端JavaScript编程时必备的技能，本文是我自己对DOM树操作的总结，主要是方法的罗列，原理性的讲述较少，适合大家用于理清思路或是温习">
-<meta property="og:image" content="http://ojg9qyra6.bkt.clouddn.com/DOM%E6%A0%91%E7%9A%84%E6%93%8D%E4%BD%9C.png">
-<meta property="og:updated_time" content="2017-03-01T06:10:38.921Z">
+<meta property="og:description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
+<meta property="og:updated_time" content="2017-03-07T14:07:35.617Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DOM树的增查改删总结">
-<meta name="twitter:description" content="对HTML DOM的操作是前端JavaScript编程时必备的技能，本文是我自己对DOM树操作的总结，主要是方法的罗列，原理性的讲述较少，适合大家用于理清思路或是温习">
-<meta name="twitter:image" content="http://ojg9qyra6.bkt.clouddn.com/DOM%E6%A0%91%E7%9A%84%E6%93%8D%E4%BD%9C.png">
+<meta name="twitter:title" content="深入理解JavaScript的闭包">
+<meta name="twitter:description" content="闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包">
 
 
 
@@ -123,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/02/DOM树的增删改查/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/03/轻松理解JavaScript之闭包/"/>
 
 
 
 
 
-  <title> DOM树的增查改删总结 | 嵘么么的个人博客 </title>
+  <title> 深入理解JavaScript的闭包 | 嵘么么的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -262,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/02/DOM树的增删改查/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/03/轻松理解JavaScript之闭包/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="嵘么么">
@@ -286,7 +284,7 @@
             
             
               
-                DOM树的增查改删总结
+                深入理解JavaScript的闭包
               
             
           </h1>
@@ -301,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-02T20:30:44+08:00">
-                2017-01-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-03T20:30:44+08:00">
+                2017-01-03
               </time>
             
 
@@ -342,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/02/DOM树的增删改查/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/02/DOM树的增删改查/" itemprop="commentCount"></span>
+                <a href="/2017/01/03/轻松理解JavaScript之闭包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/03/轻松理解JavaScript之闭包/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -353,7 +351,7 @@
 
           
           
-             <span id="/2017/01/02/DOM树的增删改查/" class="leancloud_visitors" data-flag-title="DOM树的增查改删总结">
+             <span id="/2017/01/03/轻松理解JavaScript之闭包/" class="leancloud_visitors" data-flag-title="深入理解JavaScript的闭包">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -381,12 +379,29 @@
 
       
         <blockquote>
-<p>对HTML DOM的操作是前端JavaScript编程时必备的技能，本文是我自己对DOM树操作的总结，主要是方法的罗列，原理性的讲述较少，适合大家用于理清思路或是温习</p>
+<p>闭包机制是JavaScript的重点和难点，本文希望能帮助大家轻松的学习闭包</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="一、什么是HTML-DOM？"><a href="#一、什么是HTML-DOM？" class="headerlink" title="一、什么是HTML DOM？"></a>一、什么是HTML DOM？</h2><p>是W3C制定的标准，是HTML的标准对象模型，是访问HTML的编程接口。总而言之，就是让我们对HTML元素进行操作的标准</p>
-<h2 id="二、对DOM树的操作"><a href="#二、对DOM树的操作" class="headerlink" title="二、对DOM树的操作"></a>二、对DOM树的操作</h2><p>方法的总结我喜欢用逻辑图的形式展示，这样更加清晰明了，图如下：<br><img src="http://ojg9qyra6.bkt.clouddn.com/DOM%E6%A0%91%E7%9A%84%E6%93%8D%E4%BD%9C.png" alt=""></p>
-<h2 id="三、DOM2与DOM3"><a href="#三、DOM2与DOM3" class="headerlink" title="三、DOM2与DOM3"></a>三、DOM2与DOM3</h2><p>DOM2和DOM3主要是扩展了DOM API，例如：操作样式的API，遍历。使操作起来更方便。</p>
+<h2 id="一、什么是闭包？"><a href="#一、什么是闭包？" class="headerlink" title="一、什么是闭包？"></a>一、什么是闭包？</h2><p>闭包就是可以访问另一个函数作用域中变量的<strong>函数</strong>。<br>下面列举出常见的闭包实现方式，以例子讲解闭包概念</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function f1()&#123;</div><div class="line">　　　　var n=999;</div><div class="line">　　　　nAdd=function()&#123;n+=1&#125;</div><div class="line">　　　　function f2()&#123;</div><div class="line">　　　　　　alert(n);</div><div class="line">　　　　&#125;</div><div class="line">　　　　return f2;</div><div class="line">　　&#125;</div><div class="line">　　var result=f1();</div><div class="line">　　result(); // 999</div><div class="line">　　nAdd();</div><div class="line">　　result(); // 1000</div></pre></td></tr></table></figure>
+<p>f1是f2的父函数，而f2被赋给了一个全局变量（return的值），这导致f2始终在内存中，而f2的存在依赖于f1，因此f1也始终在内存中，不会在调用结束后，被垃圾回收机制（garbage collection）回收，这便形成了闭包。<br>因此，可以这么理解。<strong>闭包机制就是，如果A函数引用了另一个函数B的变量，但是B返回后A仍没有返回，仍存在，因为A的引用，所以B的所有局部变量并不会随B退出而注销，会一直存在，直到A注销。此时A就是闭包。</strong></p>
+<h2 id="二、闭包的this指针"><a href="#二、闭包的this指针" class="headerlink" title="二、闭包的this指针"></a>二、闭包的this指针</h2><p>闭包通常在全局环境调用的，所以this通常指向window，具体情况还是需要视执行环境而言，总之this指向执行环境。<br>若需要闭包的this指向闭包的包含对象，则需要将包含对象的this作为变量传进闭包。</p>
+<h2 id="三、使用闭包的注意点"><a href="#三、使用闭包的注意点" class="headerlink" title="三、使用闭包的注意点"></a>三、使用闭包的注意点</h2><ol>
+<li><p>由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
+</li>
+<li><p>闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
+</li>
+</ol>
+<p>##　四、解决一道闭包常见面试题<br>问题：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function onMyLoad()&#123;</div><div class="line">            /*</div><div class="line">            抛出问题:</div><div class="line">                此题的目的是想每次点击对应目标时弹出对应的数字下标 0~4,但实际是无论点击哪个目标都会弹出数字5</div><div class="line">            问题所在:</div><div class="line">                arr 中的每一项的 onclick 均为一个函数实例(Function 对象),这个函数实例也产生了一个闭包域,</div><div class="line">                这个闭包域引用了外部闭包域的变量,其 function scope 的 closure 对象有个名为 i 的引用,</div><div class="line">                外部闭包域的私有变量内容发生变化,内部闭包域得到的值自然会发生改变</div><div class="line">            */</div><div class="line">            var arr = document.getElementsByTagName(&quot;p&quot;);</div><div class="line">            for(var i = 0; i &lt; arr.length;i++)&#123;</div><div class="line">                arr[i].onclick = function()&#123;</div><div class="line">                    alert(i);</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<p>解决方法</p>
+<ol>
+<li>在外面再加一层函数，将i作为函数参数传进来，这样每次保存的是函数内部的变量，与外部i不是同一个内存空间，而每次调用函数都会生成一个局部变量，所以可以保证每次保存的值互不影响。</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">for(var i = 0; i&lt;arr.length;i++)&#123;</div><div class="line">    arr[i].onclick = (function(arg)&#123;</div><div class="line">        return function () &#123;</div><div class="line">            alert(arg);</div><div class="line">        &#125;</div><div class="line">    &#125;)(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>用ES6新特let，将for循环的var i改成let i，这样当前的i只在本轮循环有效，所以每一次循环的i其实都是一个新的变量。你可能会问，如果每一轮循环的变量i都是重新声明的，那它怎么知道上一轮循环的值，从而计算出本轮循环的值？这是因为 JavaScript 引擎内部会记住上一轮循环的值，初始化本轮的变量i时，就在上一轮循环的基础上进行计算。</li>
+</ol>
 
       
     </div>
@@ -412,8 +427,6 @@
           
             <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            <a href="/tags/DOM/" rel="tag"># DOM</a>
-          
         </div>
       
 
@@ -421,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/25/详述JavaScript的数组/" rel="next" title="详述JavaScript数组">
-                <i class="fa fa-chevron-left"></i> 详述JavaScript数组
+              <a href="/2017/01/02/DOM树的增删改查/" rel="next" title="DOM树的增查改删总结">
+                <i class="fa fa-chevron-left"></i> DOM树的增查改删总结
               </a>
             
           </div>
@@ -431,8 +444,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/01/03/轻松理解JavaScript之闭包/" rel="prev" title="深入理解JavaScript的闭包">
-                深入理解JavaScript的闭包 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/01/20/利用express创建项目/" rel="prev" title="如何利用express新建项目（上）">
+                如何利用express新建项目（上） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -448,10 +461,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/01/02/DOM树的增删改查/"
-     data-title="DOM树的增查改删总结"
+        <div class="ds-share flat" data-thread-key="2017/01/03/轻松理解JavaScript之闭包/"
+     data-title="深入理解JavaScript的闭包"
      data-content=""
-     data-url="http://yoursite.com/2017/01/02/DOM树的增删改查/">
+     data-url="http://yoursite.com/2017/01/03/轻松理解JavaScript之闭包/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -478,8 +491,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/02/DOM树的增删改查/"
-           data-title="DOM树的增查改删总结" data-url="http://yoursite.com/2017/01/02/DOM树的增删改查/">
+      <div class="ds-thread" data-thread-key="2017/01/03/轻松理解JavaScript之闭包/"
+           data-title="深入理解JavaScript的闭包" data-url="http://yoursite.com/2017/01/03/轻松理解JavaScript之闭包/">
       </div>
     
   </div>
@@ -608,7 +621,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是HTML-DOM？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是HTML DOM？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、对DOM树的操作"><span class="nav-number">2.</span> <span class="nav-text">二、对DOM树的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、DOM2与DOM3"><span class="nav-number">3.</span> <span class="nav-text">三、DOM2与DOM3</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、什么是闭包？"><span class="nav-number">1.</span> <span class="nav-text">一、什么是闭包？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、闭包的this指针"><span class="nav-number">2.</span> <span class="nav-text">二、闭包的this指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、使用闭包的注意点"><span class="nav-number">3.</span> <span class="nav-text">三、使用闭包的注意点</span></a></li></ol></div>
             
 
           </div>
