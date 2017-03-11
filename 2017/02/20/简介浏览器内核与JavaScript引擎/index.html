@@ -84,22 +84,16 @@
 
 
 
-<meta name="description" content="本文介绍了常用浏览器内核与JavaScript引擎
-
-一、浏览器内核Rending Engine, 顾名思义，称之为渲染网页内容的，将网页的代码转换为你看得见的页面，因为是排版，所以排版，所以肯定会有排版错误等问题。为什么会有排版错误呢，一部分是由于网站本身编写不规范，另一方面是浏览器本身的不规范，现在有一些主流的排版引擎，因为这些排版引擎都有其代表的浏览器，所以常常会把排版引擎的名称和浏览器的">
+<meta name="description" content="本文介绍了常用浏览器内核与JavaScript引擎">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简介浏览器内核与JavaScript引擎">
 <meta property="og:url" content="http://yoursite.com/2017/02/20/简介浏览器内核与JavaScript引擎/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
-<meta property="og:description" content="本文介绍了常用浏览器内核与JavaScript引擎
-
-一、浏览器内核Rending Engine, 顾名思义，称之为渲染网页内容的，将网页的代码转换为你看得见的页面，因为是排版，所以排版，所以肯定会有排版错误等问题。为什么会有排版错误呢，一部分是由于网站本身编写不规范，另一方面是浏览器本身的不规范，现在有一些主流的排版引擎，因为这些排版引擎都有其代表的浏览器，所以常常会把排版引擎的名称和浏览器的">
-<meta property="og:updated_time" content="2017-03-11T14:26:44.621Z">
+<meta property="og:description" content="本文介绍了常用浏览器内核与JavaScript引擎">
+<meta property="og:updated_time" content="2017-03-11T14:28:10.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简介浏览器内核与JavaScript引擎">
-<meta name="twitter:description" content="本文介绍了常用浏览器内核与JavaScript引擎
-
-一、浏览器内核Rending Engine, 顾名思义，称之为渲染网页内容的，将网页的代码转换为你看得见的页面，因为是排版，所以排版，所以肯定会有排版错误等问题。为什么会有排版错误呢，一部分是由于网站本身编写不规范，另一方面是浏览器本身的不规范，现在有一些主流的排版引擎，因为这些排版引擎都有其代表的浏览器，所以常常会把排版引擎的名称和浏览器的">
+<meta name="twitter:description" content="本文介绍了常用浏览器内核与JavaScript引擎">
 
 
 
@@ -387,6 +381,7 @@
         <blockquote>
 <p>本文介绍了常用浏览器内核与JavaScript引擎</p>
 </blockquote>
+<a id="more"></a>
 <h2 id="一、浏览器内核"><a href="#一、浏览器内核" class="headerlink" title="一、浏览器内核"></a>一、浏览器内核</h2><p>Rending Engine, 顾名思义，称之为渲染网页内容的，将网页的代码转换为你看得见的页面，因为是排版，所以排版，所以肯定会有排版错误等问题。为什么会有排版错误呢，一部分是由于网站本身编写不规范，另一方面是浏览器本身的不规范，现在有一些主流的排版引擎，因为这些排版引擎都有其代表的浏览器，所以常常会把排版引擎的名称和浏览器的名称混用，其实这样是不合理的，因为一个完整的浏览器不会只有唯一的排版引擎，还有自己的界面框架和其他的功能支撑，而排版引擎本身也不可能实现浏览器的所有功能，下面罗列出几款主流的的排版引擎和浏览器</p>
 <h3 id="1、Trident内核-window"><a href="#1、Trident内核-window" class="headerlink" title="1、Trident内核(window)"></a>1、Trident内核(window)</h3><p>Trident就是大名鼎鼎的IE浏览器所使用的内核，也是很多浏览器所使用的内核，MS现在采用的越来越少，反之使用webkit的越来越多，老的trident内核（比如IE6）当年占得市场份额很大，后果就是大量的网页是专门为IE6等老trident内核编写，但这些网页的代码并不符合w3c标准，于是完全符合w3c标准的网页在老trident内核下出现了偏差，这就是为什么后来很多人觉得后来的IE9网页排版有点混乱，而IE6正常，其实不是浏览器的兼容性差了，而是你访问的的网页不符合新的标准，目前可供调用的最新版的Trident内核是IE9使用的内核，较之前的版本对w3c的标准支持增了很多<br>基于Trident内核的浏览器有:<br>ie6,ie7,ie8(Trident 4.0) , ie9(trident 5.0)  , ie10(trident6.0);<br>世界之窗，360安全浏览器， 遨游2.0（3.0以上版本开始采用webkit内核），搜狗浏览器，腾讯TT；其中部分版本的浏览器是双核浏览器，甚至是多核，</p>
 <h3 id="2、Gecko（跨平台）"><a href="#2、Gecko（跨平台）" class="headerlink" title="2、Gecko（跨平台）"></a>2、Gecko（跨平台）</h3><p>Natescape6启用的内核，现在又mozilla基金会进行维护，是开源的浏览器内核，目前主流的Gecko内核是mozilla firefox, 由于firefox的出现，IE的霸主地位逐渐被削弱，chrome的出现加速了这个进程，非trident内核的兴起逐渐改变了整个互联网的格局，最直接的推动是编码的标准化，也使MS在竞争的压力下不得不改进IE，不过可惜的是，虽然是开源的，也开发了这么多年，基于Gecko的浏览器并不多见，除了一些简单的改动或者重新编译，深度定制或者增了强外壳的还是比较少见。另外就是一些软件借用了Gecko,比如音乐管理软件songbird</p>
