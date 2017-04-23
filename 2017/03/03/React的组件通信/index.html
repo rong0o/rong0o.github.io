@@ -90,10 +90,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/03/React的组件通信/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
 <meta property="og:description" content="本章讲解ReactJS的组件间通信">
-<meta property="og:updated_time" content="2017-04-23T14:04:55.693Z">
+<meta property="og:image" content="http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png">
+<meta property="og:updated_time" content="2017-04-23T14:12:34.055Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React的组件间通信">
 <meta name="twitter:description" content="本章讲解ReactJS的组件间通信">
+<meta name="twitter:image" content="http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png">
 
 
 
@@ -382,11 +384,12 @@
 <p>本章讲解ReactJS的组件间通信</p>
 </blockquote>
 <a id="more"></a>
-<p>一、React的单向数据流<br>React是单向数据流，数据主要从父节点传递到子节点（通过props）。<br>如果顶层（父级）的某个props改变了，React会重渲染所有的子节点。这通常被称为“自顶向下”或“单向”数据流。任何状态始终由某个特定组件所有，并且从该状态导出的任何数据或UI只能影响树中“下方”的组件。</p>
-<p>二、React的组件间通信<br>1）父级-》子级 ，比较简单，直接调用时设置props值<br>2）子级-》父级，用回调函数，传参<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Father extends React.Component&#123;</div><div class="line">  constructor(props)&#123;</div><div class="line">    super(props);</div><div class="line">    this.state=&#123;</div><div class="line">      inputValue:&quot;&quot;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  //在回调函数里处理子级的输入</div><div class="line">  handleInputChange(e)&#123;</div><div class="line">    this.setState(&#123;</div><div class="line">      inputValue:e.target.value</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">      &lt;span&gt;输入为&#123;this.state.inputValue&#125;&lt;/span&gt;</div><div class="line">      &lt;Child  onChange=&#123;this.handleInput2Change.bind(this)&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//通过onChange=&#123;this.props.onChange&#125;，子级输入事件发生时，调用的是父级传入的回调函数</div><div class="line">class Child extends React.Component&#123;</div><div class="line">   render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Father /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
-<p>3）兄弟《-》兄弟：<br>按照React单向数据流方式，我们需要借助父组件进行传递，通过父组件回调函数改变兄弟组件的props。其实这种实现方式与子组件更新父组件状态的方式是大同小异的。<br>下面实现一个组件通信的例子，一个输入框的数据改变，另一个输入框数据会跟随同时改变。</p>
+<h2 id="一、React的单向数据流"><a href="#一、React的单向数据流" class="headerlink" title="一、React的单向数据流"></a>一、React的单向数据流</h2><p>React是单向数据流，数据主要从父节点传递到子节点（通过props）。<br>如果顶层（父级）的某个props改变了，React会重渲染所有的子节点。这通常被称为“自顶向下”或“单向”数据流。任何状态始终由某个特定组件所有，并且从该状态导出的任何数据或UI只能影响树中“下方”的组件。</p>
+<h2 id="二、React的组件间通信"><a href="#二、React的组件间通信" class="headerlink" title="二、React的组件间通信"></a>二、React的组件间通信</h2><h3 id="1）父级-》子级"><a href="#1）父级-》子级" class="headerlink" title="1）父级-》子级"></a>1）父级-》子级</h3><p>比较简单，直接调用时设置props值</p>
+<h3 id="2）子级-》父级"><a href="#2）子级-》父级" class="headerlink" title="2）子级-》父级"></a>2）子级-》父级</h3><p>用回调函数，传参<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Father extends React.Component&#123;</div><div class="line">  constructor(props)&#123;</div><div class="line">    super(props);</div><div class="line">    this.state=&#123;</div><div class="line">      inputValue:&quot;&quot;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  //在回调函数里处理子级的输入</div><div class="line">  handleInputChange(e)&#123;</div><div class="line">    this.setState(&#123;</div><div class="line">      inputValue:e.target.value</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">      &lt;span&gt;输入为&#123;this.state.inputValue&#125;&lt;/span&gt;</div><div class="line">      &lt;Child  onChange=&#123;this.handleInput2Change.bind(this)&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//通过onChange=&#123;this.props.onChange&#125;，子级输入事件发生时，调用的是父级传入的回调函数</div><div class="line">class Child extends React.Component&#123;</div><div class="line">   render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Father /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<h3 id="3）兄弟《-》兄弟："><a href="#3）兄弟《-》兄弟：" class="headerlink" title="3）兄弟《-》兄弟："></a>3）兄弟《-》兄弟：</h3><p>按照React单向数据流方式，我们需要借助父组件进行传递，通过父组件回调函数改变兄弟组件的props。其实这种实现方式与子组件更新父组件状态的方式是大同小异的。<br>下面实现一个组件通信的例子，一个输入框的数据改变，另一个输入框数据会跟随同时改变。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">class Form1 extends React.Component&#123;</div><div class="line">  constructor(props)&#123;</div><div class="line">    super(props);</div><div class="line">    this.state=&#123;</div><div class="line">      input1Value:&quot;&quot;,</div><div class="line">      input2Value:&quot;&quot;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  handleInput1Change(e)&#123;</div><div class="line">    const input1=e.target.value;</div><div class="line">    let input2=input1-1;</div><div class="line">    this.setState(&#123;</div><div class="line">      input1Value:input1,</div><div class="line">      input2Value:input2</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  handleInput2Change(e)&#123;</div><div class="line">    const input2=e.target.value;</div><div class="line">    let input1=input2-0 + 1;</div><div class="line">    this.setState(&#123;</div><div class="line">      input1Value:input1,</div><div class="line">      input2Value:input2</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">       输入框1：</div><div class="line">      &lt;Input1 value=&#123;this.state.input1Value&#125; onChange=&#123;this.handleInput1Change.bind(this)&#125; /&gt;</div><div class="line">       输入框2：</div><div class="line">      &lt;Input2 value=&#123;this.state.input2Value&#125; onChange=&#123;this.handleInput2Change.bind(this)&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">class Input1 extends React.Component&#123;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">class Input2 extends React.Component&#123;</div><div class="line">   render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Form1 /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>()![<a href="http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png" target="_blank" rel="external">http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png</a>]</p>
+<p><img src="http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png" alt=""></p>
 
       
     </div>
@@ -419,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/02/ReactJS的学习（下）/" rel="next" title="ReactJS的学习（上）">
-                <i class="fa fa-chevron-left"></i> ReactJS的学习（上）
+              <a href="/2017/03/02/ReactJS的学习（下）/" rel="next" title="ReactJS的学习（下）">
+                <i class="fa fa-chevron-left"></i> ReactJS的学习（下）
               </a>
             
           </div>
@@ -497,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -554,6 +566,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、React的单向数据流"><span class="nav-number">1.</span> <span class="nav-text">一、React的单向数据流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、React的组件间通信"><span class="nav-number">2.</span> <span class="nav-text">二、React的组件间通信</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）父级-》子级"><span class="nav-number">2.1.</span> <span class="nav-text">1）父级-》子级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）子级-》父级"><span class="nav-number">2.2.</span> <span class="nav-text">2）子级-》父级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）兄弟《-》兄弟："><span class="nav-number">2.3.</span> <span class="nav-text">3）兄弟《-》兄弟：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
     </div>

@@ -86,13 +86,13 @@
 
 <meta name="description" content="众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ReactJS的学习（上）">
+<meta property="og:title" content="ReactJS的学习（下）">
 <meta property="og:url" content="http://yoursite.com/2017/03/02/ReactJS的学习（下）/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
 <meta property="og:description" content="众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅">
-<meta property="og:updated_time" content="2017-04-23T13:47:23.925Z">
+<meta property="og:updated_time" content="2017-04-23T14:12:36.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ReactJS的学习（上）">
+<meta name="twitter:title" content="ReactJS的学习（下）">
 <meta name="twitter:description" content="众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅">
 
 
@@ -127,7 +127,7 @@
 
 
 
-  <title> ReactJS的学习（上） | 嵘么么的个人博客 </title>
+  <title> ReactJS的学习（下） | 嵘么么的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -284,7 +284,7 @@
             
             
               
-                ReactJS的学习（上）
+                ReactJS的学习（下）
               
             
           </h1>
@@ -351,7 +351,7 @@
 
           
           
-             <span id="/2017/03/02/ReactJS的学习（下）/" class="leancloud_visitors" data-flag-title="ReactJS的学习（上）">
+             <span id="/2017/03/02/ReactJS的学习（下）/" class="leancloud_visitors" data-flag-title="ReactJS的学习（下）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -379,26 +379,26 @@
 
       
         <blockquote>
-<p>众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅(官方文档)[<a href="https://facebook.github.io/react/docs/installation.html]，也敬请期待后续文章。" target="_blank" rel="external">https://facebook.github.io/react/docs/installation.html]，也敬请期待后续文章。</a></p>
+<p>众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅<a href="https://facebook.github.io/react/docs/installation.html" target="_blank" rel="external">官方文档</a>，也敬请期待后续文章。</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="5、表单"><a href="#5、表单" class="headerlink" title="5、表单"></a>5、表单</h2><p>文本输入框的值，不能用 this.props.value 读取，而要定义一个 onChange 事件的回调函数，通过 event.target.value 读取用户输入的值。textarea 元素、select元素、radio元素都属于这种情况，更多介绍请参考官方文档。<br>如果你希望React指定初始值，但不再控制后续更新。要处理这种情况，可以指定一个defaultValue属性而不是value。<br> <input type="checkbox">和<input type="radio">支持defaultChecked，<select>与</select><textarea>支持defaultValue。</textarea></p>
+<h2 id="5、表单"><a href="#5、表单" class="headerlink" title="5、表单"></a>5、表单</h2><p>文本输入框的值，不能用 this.props.value 读取，而要定义一个 onChange 事件的回调函数，通过 event.target.value 读取用户输入的值。textarea 元素、select元素、radio元素都属于这种情况，更多介绍请参考官方文档。<br>如果你希望React指定初始值，但不再控制后续更新。要处理这种情况，可以指定一个defaultValue属性而不是value。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;input type=&quot;checkbox&quot;&gt;和&lt;input type=&quot;radio&quot;&gt;支持defaultChecked，&lt;select&gt;与&lt;textarea&gt;支持defaultValue。</div></pre></td></tr></table></figure>
 <h2 id="6、组件生命周期"><a href="#6、组件生命周期" class="headerlink" title="6、组件生命周期"></a>6、组件生命周期</h2><p>组件的生命周期分成三个状态：</p>
 <ul>
 <li>Mounting：已插入真实 DOM</li>
 <li>Updating：正在被重新渲染</li>
-<li>Unmounting：已移出真实 DOM<br>React 为每个状态都提供了两种处理函数，will 函数在进入状态之前调用，did 函数在进入状态之后调用，三种状态共计五种处理函数。<br>componentWillMount()<br>componentDidMount()<br>componentWillUpdate(object nextProps, object nextState)<br>componentDidUpdate(object prevProps, object prevState)<br>componentWillUnmount()<br>此外，React 还提供两种特殊状态的处理函数。<br>componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用<br>shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用</li>
+<li>Unmounting：已移出真实 DOM</li>
 </ul>
+<p>React 为每个状态都提供了两种处理函数，will 函数在进入状态之前调用，did 函数在进入状态之后调用，三种状态共计五种处理函数。<br>componentWillMount()<br>componentDidMount()<br>componentWillUpdate(object nextProps, object nextState)<br>componentDidUpdate(object prevProps, object prevState)<br>componentWillUnmount()<br>此外，React 还提供两种特殊状态的处理函数。<br>componentWillReceiveProps(object nextProps)：已加载组件收到新的参数时调用<br>shouldComponentUpdate(object nextProps, object nextState)：组件判断是否重新渲染时调用</p>
 <h2 id="7、AJAX"><a href="#7、AJAX" class="headerlink" title="7、AJAX"></a>7、AJAX</h2><p>React并没有像Angular一样一手包办，连http服务都帮我们封装好了，因为它提倡的是以React为核心，同时你可以使用其他的库，增加代码的灵活性，而不是一手包办，所以React是个轻量的库。<br>组件的数据来源，通常是通过 Ajax 请求从服务器获取，可以使用 componentDidMount 方法设置 Ajax 请求，等到请求成功，再用 this.setState 方法重新渲染 UI 。</p>
-<h2 id="8、样式的设置"><a href="#8、样式的设置" class="headerlink" title="8、样式的设置"></a>8、样式的设置</h2><p>1）设置class<br>因为class是ES6语法里的关键字，所以在React里使用class时，应该改为className,例如</p>
+<h2 id="8、样式的设置"><a href="#8、样式的设置" class="headerlink" title="8、样式的设置"></a>8、样式的设置</h2><h3 id="1）设置class"><a href="#1）设置class" class="headerlink" title="1）设置class"></a>1）设置class</h3><p>因为class是ES6语法里的关键字，所以在React里使用class时，应该改为className,例如</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div className=&quot;style1&quot;&gt;&lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>2）使用行内样式<br>style的值是对象，所以如下：</p>
+<h3 id="2）使用行内样式"><a href="#2）使用行内样式" class="headerlink" title="2）使用行内样式"></a>2）使用行内样式</h3><p>style的值是对象，所以如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">let backAndTextColor = &#123;  </div><div class="line">    backgroundColor:&apos;red&apos;,  </div><div class="line">    color:&apos;white&apos;,  </div><div class="line">    fontSize:40  </div><div class="line">&#125;; </div><div class="line">&lt;div style=&#123;backAndTextColor&#125;&gt;看背景颜色和文字颜色&lt;/div&gt;  </div><div class="line">//或者，注意是双括号哦，第一层是&#123;&#125;是JSX语法，第二层&#123;&#125;代表是对象，是不是一目了然了</div><div class="line">&lt;div style=&#123;&#123;backgroundColor:&apos;red&apos;,color:&apos;white&apos;,fontSize:40&#125;&#125;&gt;看背景颜色和文字颜色&lt;/div&gt;</div></pre></td></tr></table></figure>
 <h2 id="9、操作组件内节点"><a href="#9、操作组件内节点" class="headerlink" title="9、操作组件内节点"></a>9、操作组件内节点</h2><p>通过设置标签的ref属性，然后用this.refs[‘前面的ref名’]访问<br>可以拿到原生的节点后，这时就可以使用其他方法比如jQuery操作原生的节点【题外话：通过$()[0],可以从jQuery对象中拿到原生对象】</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">var MyComponent = React.createClass(&#123;</div><div class="line">  handleClick: function() &#123;</div><div class="line">    this.refs.myTextInput.focus();</div><div class="line">  &#125;,</div><div class="line">  render: function() &#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">        &lt;input type=&quot;text&quot; ref=&quot;myTextInput&quot; /&gt;</div><div class="line">        &lt;input type=&quot;button&quot; value=&quot;Focus the text input&quot; onClick=&#123;this.handleClick&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;MyComponent /&gt;,</div><div class="line">  document.getElementById(&apos;example&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
-<p>上面代码中，组件 MyComponent 的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的 DOM 节点，虚拟 DOM 是拿不到用户输入的。为了做到这一点，文本输入框必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。</p>
-<p>通过这个ref我们同样可以获取input的输入值。就是这么简单。</p>
-<p>但是使用过程中我们切记：由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 this.refs.[refName] 属性。</p>
+<p>上面代码中，组件 MyComponent 的子节点有一个文本输入框，用于获取用户的输入。这时就必须获取真实的 DOM 节点，虚拟 DOM 是拿不到用户输入的。为了做到这一点，文本输入框必须有一个 ref 属性，然后 this.refs.[refName] 就会返回这个真实的 DOM 节点。<br>通过这个ref我们同样可以获取input的输入值。就是这么简单。<br>但是使用过程中我们切记：由于 this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。上面代码中，通过为组件指定 Click 事件的回调函数，确保了只有等到真实 DOM 发生 Click 事件之后，才会读取 this.refs.[refName] 属性。</p>
 <h2 id="10、一个简单的demo"><a href="#10、一个简单的demo" class="headerlink" title="10、一个简单的demo"></a>10、一个简单的demo</h2><p>接下来展示一个简单的demo，实现网页时钟显示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">class Timer extends React.Component&#123;</div><div class="line">  constructor(props) &#123;</div><div class="line">    super(props);</div><div class="line">    this.state = &#123;h:0,m:0,s:0&#125;;</div><div class="line">    </div><div class="line">  &#125; </div><div class="line"> </div><div class="line">  tick()&#123;</div><div class="line">    var now_date=new Date();</div><div class="line">    this.setState(&#123;</div><div class="line">    h:now_date.getHours(),</div><div class="line">    m:now_date.getMinutes(),</div><div class="line">    s:now_date.getSeconds()</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  componentDidMount()&#123;</div><div class="line">    var _this=this;</div><div class="line">    setInterval(function()&#123;</div><div class="line">    _this.tick();</div><div class="line">     &#125;,1000);</div><div class="line">    this.tick();  //组件刚挂载时执行tick()，可以避免出现0:0:0</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">    &lt;span&gt;&#123;this.state.h&#125;:&lt;/span&gt;</div><div class="line">    &lt;span&gt;&#123;this.state.m&#125;:&lt;/span&gt;</div><div class="line">    &lt;span&gt;&#123;this.state.s&#125;&lt;/span&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Timer /&gt;,</div><div class="line"> document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
 
       
@@ -460,7 +460,7 @@
     <div class="post-spread">
       
         <div class="ds-share flat" data-thread-key="2017/03/02/ReactJS的学习（下）/"
-     data-title="ReactJS的学习（上）"
+     data-title="ReactJS的学习（下）"
      data-content=""
      data-url="http://yoursite.com/2017/03/02/ReactJS的学习（下）/">
   <div class="ds-share-inline">
@@ -490,7 +490,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/02/ReactJS的学习（下）/"
-           data-title="ReactJS的学习（上）" data-url="http://yoursite.com/2017/03/02/ReactJS的学习（下）/">
+           data-title="ReactJS的学习（下）" data-url="http://yoursite.com/2017/03/02/ReactJS的学习（下）/">
       </div>
     
   </div>
@@ -590,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#5、表单"><span class="nav-number">1.</span> <span class="nav-text">5、表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、组件生命周期"><span class="nav-number">2.</span> <span class="nav-text">6、组件生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、AJAX"><span class="nav-number">3.</span> <span class="nav-text">7、AJAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、样式的设置"><span class="nav-number">4.</span> <span class="nav-text">8、样式的设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、操作组件内节点"><span class="nav-number">5.</span> <span class="nav-text">9、操作组件内节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、一个简单的demo"><span class="nav-number">6.</span> <span class="nav-text">10、一个简单的demo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#5、表单"><span class="nav-number">1.</span> <span class="nav-text">5、表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、组件生命周期"><span class="nav-number">2.</span> <span class="nav-text">6、组件生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、AJAX"><span class="nav-number">3.</span> <span class="nav-text">7、AJAX</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、样式的设置"><span class="nav-number">4.</span> <span class="nav-text">8、样式的设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）设置class"><span class="nav-number">4.1.</span> <span class="nav-text">1）设置class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）使用行内样式"><span class="nav-number">4.2.</span> <span class="nav-text">2）使用行内样式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、操作组件内节点"><span class="nav-number">5.</span> <span class="nav-text">9、操作组件内节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、一个简单的demo"><span class="nav-number">6.</span> <span class="nav-text">10、一个简单的demo</span></a></li></ol></div>
             
 
           </div>
