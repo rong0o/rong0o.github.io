@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="CSS," />
+  <meta name="keywords" content="React," />
 
 
 
@@ -84,16 +84,16 @@
 
 
 
-<meta name="description" content="我们经常设置margin，但大家是否知道可以通过设置负边距来达到一些特殊的效果。本文将简单讲述这奇妙的负边距">
+<meta name="description" content="本章讲解ReactJS的组件间通信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS——负边距">
-<meta property="og:url" content="http://yoursite.com/2017/01/12/CSS——负边距/index.html">
+<meta property="og:title" content="React的组件间通信">
+<meta property="og:url" content="http://yoursite.com/2017/03/03/React的组件通信/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
-<meta property="og:description" content="我们经常设置margin，但大家是否知道可以通过设置负边距来达到一些特殊的效果。本文将简单讲述这奇妙的负边距">
-<meta property="og:updated_time" content="2017-03-13T12:55:46.028Z">
+<meta property="og:description" content="本章讲解ReactJS的组件间通信">
+<meta property="og:updated_time" content="2017-04-23T14:04:55.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS——负边距">
-<meta name="twitter:description" content="我们经常设置margin，但大家是否知道可以通过设置负边距来达到一些特殊的效果。本文将简单讲述这奇妙的负边距">
+<meta name="twitter:title" content="React的组件间通信">
+<meta name="twitter:description" content="本章讲解ReactJS的组件间通信">
 
 
 
@@ -121,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/12/CSS——负边距/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/03/React的组件通信/"/>
 
 
 
 
 
-  <title> CSS——负边距 | 嵘么么的个人博客 </title>
+  <title> React的组件间通信 | 嵘么么的个人博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -260,7 +260,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/01/12/CSS——负边距/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/03/React的组件通信/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="嵘么么">
@@ -284,7 +284,7 @@
             
             
               
-                CSS——负边距
+                React的组件间通信
               
             
           </h1>
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-01-12T20:30:44+08:00">
-                2017-01-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T20:30:44+08:00">
+                2017-03-03
               </time>
             
 
@@ -322,8 +322,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
                   </a>
                 </span>
 
@@ -340,8 +340,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/01/12/CSS——负边距/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/12/CSS——负边距/" itemprop="commentCount"></span>
+                <a href="/2017/03/03/React的组件通信/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/03/React的组件通信/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -351,7 +351,7 @@
 
           
           
-             <span id="/2017/01/12/CSS——负边距/" class="leancloud_visitors" data-flag-title="CSS——负边距">
+             <span id="/2017/03/03/React的组件通信/" class="leancloud_visitors" data-flag-title="React的组件间通信">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -379,13 +379,14 @@
 
       
         <blockquote>
-<p>我们经常设置margin，但大家是否知道可以通过设置负边距来达到一些特殊的效果。本文将简单讲述这奇妙的负边距</p>
+<p>本章讲解ReactJS的组件间通信</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="一、使用负边距的效果"><a href="#一、使用负边距的效果" class="headerlink" title="一、使用负边距的效果"></a>一、使用负边距的效果</h2><p>一个static的元素使用负边距之后：<br>当一个static元素在top/left使用负边距时，它把元素向这个特定的方向拉<br>当你将负边距设置为相对bottom/right时，它并不会把元素向下或右拉，相反，它会把后面的元素往里面拉，从而覆盖自己。</p>
-<h2 id="二、为什么使用负边距"><a href="#二、为什么使用负边距" class="headerlink" title="二、为什么使用负边距"></a>二、为什么使用负边距</h2><p>负边距对这些由文档流控制的元素的作用是，会使它们在文档流中的位置发生偏移，但这种偏移不同于相对定位，通过相对定位偏移后，其仍然会坚守着它原来占据的空间，不会让文档流的其它元素乘虚而入。而通过负边距进行偏移的元素，它会放弃偏移前占据的空间，这样它后面文档流中的其它元素就会“流”过来填充这部分空间。</p>
-<p>负的边距好像能减小元素在文档流中的尺寸一样，但事实上，它的尺寸大小并没变，只是文档流在计算元素位置的时候，会认为负边距把元素的尺寸减小了，因为位置也就发生变化了。这只是打个很形象的比喻，帮助大家理解一下。还要注意的是，文档流只能是后面的流向前面的，即文档流只能向左或向上流动，不能向下或向右移动。</p>
-<p>所以，一切只要是由文档流决定的东西，负边距就能起作用了。</p>
+<p>一、React的单向数据流<br>React是单向数据流，数据主要从父节点传递到子节点（通过props）。<br>如果顶层（父级）的某个props改变了，React会重渲染所有的子节点。这通常被称为“自顶向下”或“单向”数据流。任何状态始终由某个特定组件所有，并且从该状态导出的任何数据或UI只能影响树中“下方”的组件。</p>
+<p>二、React的组件间通信<br>1）父级-》子级 ，比较简单，直接调用时设置props值<br>2）子级-》父级，用回调函数，传参<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">class Father extends React.Component&#123;</div><div class="line">  constructor(props)&#123;</div><div class="line">    super(props);</div><div class="line">    this.state=&#123;</div><div class="line">      inputValue:&quot;&quot;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  //在回调函数里处理子级的输入</div><div class="line">  handleInputChange(e)&#123;</div><div class="line">    this.setState(&#123;</div><div class="line">      inputValue:e.target.value</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">      &lt;span&gt;输入为&#123;this.state.inputValue&#125;&lt;/span&gt;</div><div class="line">      &lt;Child  onChange=&#123;this.handleInput2Change.bind(this)&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//通过onChange=&#123;this.props.onChange&#125;，子级输入事件发生时，调用的是父级传入的回调函数</div><div class="line">class Child extends React.Component&#123;</div><div class="line">   render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Father /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>3）兄弟《-》兄弟：<br>按照React单向数据流方式，我们需要借助父组件进行传递，通过父组件回调函数改变兄弟组件的props。其实这种实现方式与子组件更新父组件状态的方式是大同小异的。<br>下面实现一个组件通信的例子，一个输入框的数据改变，另一个输入框数据会跟随同时改变。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">class Form1 extends React.Component&#123;</div><div class="line">  constructor(props)&#123;</div><div class="line">    super(props);</div><div class="line">    this.state=&#123;</div><div class="line">      input1Value:&quot;&quot;,</div><div class="line">      input2Value:&quot;&quot;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  handleInput1Change(e)&#123;</div><div class="line">    const input1=e.target.value;</div><div class="line">    let input2=input1-1;</div><div class="line">    this.setState(&#123;</div><div class="line">      input1Value:input1,</div><div class="line">      input2Value:input2</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  handleInput2Change(e)&#123;</div><div class="line">    const input2=e.target.value;</div><div class="line">    let input1=input2-0 + 1;</div><div class="line">    this.setState(&#123;</div><div class="line">      input1Value:input1,</div><div class="line">      input2Value:input2</div><div class="line">    &#125;);</div><div class="line">  &#125;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;div&gt;</div><div class="line">       输入框1：</div><div class="line">      &lt;Input1 value=&#123;this.state.input1Value&#125; onChange=&#123;this.handleInput1Change.bind(this)&#125; /&gt;</div><div class="line">       输入框2：</div><div class="line">      &lt;Input2 value=&#123;this.state.input2Value&#125; onChange=&#123;this.handleInput2Change.bind(this)&#125; /&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">class Input1 extends React.Component&#123;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">class Input2 extends React.Component&#123;</div><div class="line">   render()&#123;</div><div class="line">    return (</div><div class="line">     &lt;div&gt;</div><div class="line">      &lt;input value=&#123;this.props.value&#125; onChange=&#123;this.props.onChange&#125;/&gt;</div><div class="line">     &lt;/div&gt;</div><div class="line">    );</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Form1 /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
+<p>()![<a href="http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png" target="_blank" rel="external">http://ojg9qyra6.bkt.clouddn.com/React%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%A4%BA%E4%BE%8B.png</a>]</p>
 
       
     </div>
@@ -409,7 +410,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CSS/" rel="tag"># CSS</a>
+            <a href="/tags/React/" rel="tag"># React</a>
           
         </div>
       
@@ -418,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/10/AJAX/" rel="next" title="JavaScript——AJAX">
-                <i class="fa fa-chevron-left"></i> JavaScript——AJAX
+              <a href="/2017/03/02/ReactJS的学习（下）/" rel="next" title="ReactJS的学习（上）">
+                <i class="fa fa-chevron-left"></i> ReactJS的学习（上）
               </a>
             
           </div>
@@ -427,10 +428,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/13/简介浏览器内核与JavaScript引擎/" rel="prev" title="简介浏览器内核与JavaScript引擎">
-                简介浏览器内核与JavaScript引擎 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -445,10 +442,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/01/12/CSS——负边距/"
-     data-title="CSS——负边距"
+        <div class="ds-share flat" data-thread-key="2017/03/03/React的组件通信/"
+     data-title="React的组件间通信"
      data-content=""
-     data-url="http://yoursite.com/2017/01/12/CSS——负边距/">
+     data-url="http://yoursite.com/2017/03/03/React的组件通信/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -475,8 +472,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/12/CSS——负边距/"
-           data-title="CSS——负边距" data-url="http://yoursite.com/2017/01/12/CSS——负边距/">
+      <div class="ds-thread" data-thread-key="2017/03/03/React的组件通信/"
+           data-title="React的组件间通信" data-url="http://yoursite.com/2017/03/03/React的组件通信/">
       </div>
     
   </div>
@@ -500,17 +497,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
@@ -566,22 +554,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、使用负边距的效果"><span class="nav-number">1.</span> <span class="nav-text">一、使用负边距的效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、为什么使用负边距"><span class="nav-number">2.</span> <span class="nav-text">二、为什么使用负边距</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
     </div>
