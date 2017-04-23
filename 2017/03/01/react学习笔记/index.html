@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/01/react学习笔记/index.html">
 <meta property="og:site_name" content="嵘么么的个人博客">
 <meta property="og:description" content="众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅">
-<meta property="og:updated_time" content="2017-04-23T14:14:10.278Z">
+<meta property="og:updated_time" content="2017-04-23T14:18:12.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React的学习（上）">
 <meta name="twitter:description" content="众所周知，前端三大框架Angular、React、Vue，所以为了跟上时代的步伐，最近开始着手学习React，这时候就发现个大问题，框架一直在更新，提倡的编写语法也在更新，网上有许多教程都是一两年前的了，因此，我决定直接从官方英文文档入手学习，学习的框架版本为最新的ReactV15.5.0，现将学习笔记整理如下，以供大家参考，本篇文章主要是react一些基础语法的讲解与总结，如需深入了解，可查阅">
@@ -405,7 +405,7 @@
 <p>修改state时，则需要通过</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">this.setState(&#123;</div><div class="line">	key:newValue</div><div class="line">&#125;);</div><div class="line">//setState会将传入的对象与原始state合并，而非覆盖</div></pre></td></tr></table></figure>
 <blockquote>
-<p>这里对state和props只讲解了基础使用，两者的详细区别与实例，可查看我的另外一篇文章《React的组件间通信》</p>
+<p>这里对state和props只讲解了基础使用，两者的详细区别与实例，可查看我的另外一篇文章<a href="http://blog.rongmm.cn/2017/03/03/React%E7%9A%84%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/" target="_blank" rel="external">《React的组件间通信》</a></p>
 </blockquote>
 <h3 id="4、事件"><a href="#4、事件" class="headerlink" title="4、事件"></a>4、事件</h3><p>事件是页面交互的基础，React组件中，事件监听程序名采用驼峰法命名，如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">class Welcome extends React.Component &#123;</div><div class="line">	constructor(props)&#123;</div><div class="line">  	super(props);</div><div class="line">  	this.state=&#123;</div><div class="line">  		name:&quot;嵘么么的个人博客&quot;</div><div class="line">  	&#125;</div><div class="line">  	this.handleClick=this.handleClick.bind(this);</div><div class="line">  &#125;</div><div class="line">  handleClick()&#123;</div><div class="line">  	const name=this.state.name;</div><div class="line">  	alert(name+&quot;欢迎您！&quot;);</div><div class="line">  &#125;</div><div class="line">  render() &#123;</div><div class="line">    return &lt;div onClick=&#123;this.handleClick&#125;&gt;点我&lt;/div&gt;;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">ReactDOM.render(</div><div class="line">  &lt;Welcome /&gt;,</div><div class="line">  document.getElementById(&apos;root&apos;)</div><div class="line">);</div></pre></td></tr></table></figure>
